@@ -20,7 +20,16 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->unsignedBigInteger('role');
             $table->foreign('role')->references('id')->on('roles');
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->unsignedBigInteger('deleted_by')->nullable();
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
     }
 

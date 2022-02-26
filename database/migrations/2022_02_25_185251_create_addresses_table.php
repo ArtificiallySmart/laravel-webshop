@@ -30,7 +30,16 @@ class CreateAddressesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('phone_number');
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->unsignedBigInteger('deleted_by')->nullable();
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
 
         Schema::create('user_has_address', function (Blueprint $table) {
@@ -39,7 +48,16 @@ class CreateAddressesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('address_id');
             $table->foreign('address_id')->references('id')->on('addresses');
+
             $table->timestamps();
+            $table->softDeletes();
+
+            $table->unsignedBigInteger('created_by')->nullable();
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->unsignedBigInteger('updated_by')->nullable();
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->unsignedBigInteger('deleted_by')->nullable();
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
     }
 
@@ -50,6 +68,8 @@ class CreateAddressesTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('user_has_address');
+        Schema::dropIfExists('phone_numbers');
         Schema::dropIfExists('addresses');
     }
 }
