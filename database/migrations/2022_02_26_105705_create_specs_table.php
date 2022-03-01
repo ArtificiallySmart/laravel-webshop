@@ -15,7 +15,7 @@ class CreateSpecsTable extends Migration
     {
         Schema::create('specs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->unique();
             $table->enum('type', ['colors', 'sizes', 'other']);
             $table->timestamps();
         });
@@ -29,7 +29,7 @@ class CreateSpecsTable extends Migration
         });
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
+            $table->string('category')->unique();
             $table->timestamps();
         });
         Schema::create('product_has_category', function (Blueprint $table) {

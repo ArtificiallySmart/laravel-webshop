@@ -15,14 +15,17 @@ class CreateAddressesTable extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('street');
             $table->unsignedSmallInteger('house_number');
-            $table->string('house_number_addition');
-            $table->string('postal code');
+            $table->string('house_number_addition')->nullable();
+            $table->string('postal_code');
             $table->string('city');
             $table->string('country');
-            $table->enum('address_type', ['shipping_address', 'postal_address']);
+
             $table->timestamps();
+            $table->softDeletes();
         });
 
         Schema::create('phone_numbers', function (Blueprint $table) {
@@ -30,24 +33,6 @@ class CreateAddressesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('phone_number');
-
-            $table->timestamps();
-            $table->softDeletes();
-
-            $table->unsignedBigInteger('created_by')->nullable();
-            $table->foreign('created_by')->references('id')->on('users');
-            $table->unsignedBigInteger('updated_by')->nullable();
-            $table->foreign('updated_by')->references('id')->on('users');
-            $table->unsignedBigInteger('deleted_by')->nullable();
-            $table->foreign('deleted_by')->references('id')->on('users');
-        });
-
-        Schema::create('user_has_address', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('address_id');
-            $table->foreign('address_id')->references('id')->on('addresses');
 
             $table->timestamps();
             $table->softDeletes();
