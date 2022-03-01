@@ -23,7 +23,6 @@ class UsersSeeder extends Seeder
             'password'      => bcrypt('Onering'),
             'role'          => 3,
             'created_at'    => now(),
-            //'created_by'    => 1,
         ]);
 
         User::factory()
