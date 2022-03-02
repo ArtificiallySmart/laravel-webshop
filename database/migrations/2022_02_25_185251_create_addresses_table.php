@@ -18,9 +18,8 @@ class CreateAddressesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('street');
-            $table->unsignedSmallInteger('house_number');
-            $table->string('house_number_addition')->nullable();
-            $table->string('postal_code');
+            $table->string('house_number');
+            $table->string('zipcode');
             $table->string('city');
             $table->string('country');
 
@@ -32,7 +31,7 @@ class CreateAddressesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedBigInteger('phone_number');
+            $table->string('phone_number');
 
             $table->timestamps();
             $table->softDeletes();

@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         $this->hasOne(Address::class);
     }
+
+    public function phoneNumber()
+    {
+        $this->hasOne(Phone_number::class);
+    }
 }

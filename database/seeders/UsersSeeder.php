@@ -6,6 +6,9 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\PhoneNumber;
+use Faker\Factory as FakerFactory;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class UsersSeeder extends Seeder
 {
@@ -25,9 +28,13 @@ class UsersSeeder extends Seeder
             'created_at'    => now(),
         ]);
 
-        User::factory()
-            ->count(20)
-            ->has(Address::factory()->count(1))
-            ->create();
+        User::factory(10)
+            ->create()
+            ->each(function ($user) {
+                Address::factory()
+                    ->create(['user_id' => $user->id]);
+                PhoneNumber::factory()
+                    ->create(['user_id' => $user->id]);
+            });
     }
 }
