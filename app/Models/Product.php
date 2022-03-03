@@ -16,4 +16,19 @@ class Product extends Model
         'thumbnail',
         'stock'
     ];
+
+    public function specs()
+    {
+        return $this->belongsToMany(Spec::class);
+    }
+
+    public function images()
+    {
+        return $this->hasMany(Image::class);
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

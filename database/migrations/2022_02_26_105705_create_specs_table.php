@@ -19,20 +19,23 @@ class CreateSpecsTable extends Migration
             $table->enum('type', ['colors', 'sizes', 'other']);
             $table->timestamps();
         });
-        Schema::create('product_has_specs', function (Blueprint $table) {
+
+        Schema::create('product_spec', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedBigInteger('specs_id');
-            $table->foreign('specs_id')->references('id')->on('specs');
+            $table->unsignedBigInteger('spec_id');
+            $table->foreign('spec_id')->references('id')->on('specs');
             $table->timestamps();
         });
+
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('category')->unique();
+            $table->string('name')->unique();
             $table->timestamps();
         });
-        Schema::create('product_has_category', function (Blueprint $table) {
+
+        Schema::create('category_product', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
@@ -40,6 +43,7 @@ class CreateSpecsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
+
         Schema::create('product_images', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');

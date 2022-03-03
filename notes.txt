@@ -1,0 +1,17 @@
+Tables:
+
+Products:
+    has many:
+        n:n Specs
+        1:n Images
+        n:n Categories
+
+Users
+    has one:
+        1:1 address
+        1:1 phone number
+        1:1 role
+    has many:
+        1:n orders
+        1:n wishlist entries
+        

@@ -23,7 +23,7 @@ class categoriesSeeder extends Seeder
         ];
 
         foreach ($categories as $category) {
-            DB::table('permissions')->insert([
+            DB::table('categories')->insert([
                 'name'          => $category,
                 'created_at'    => now(),
             ]);
