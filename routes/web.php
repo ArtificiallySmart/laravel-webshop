@@ -28,7 +28,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('logout', [App\Http\Controllers\Admin\AdminController::class, 'logout'])->name('admin.logout');
 });
 
-
-
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

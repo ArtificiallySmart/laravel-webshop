@@ -22,8 +22,8 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component ('navbar-component', require('./components/NavbarComponent').default);
-Vue.component ('footer-component', require('./components/FooterComponent').default);
+Vue.component('navbar-component', require('./components/NavbarComponent').default);
+Vue.component('footer-component', require('./components/FooterComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
