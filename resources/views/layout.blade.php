@@ -316,7 +316,7 @@
                     </div>
 
                     <div class="imageSmaller">
-                        <img class="img-fluid" src="/images/modnkapjeSmaller.jpg" alt="Modkapje" />
+                        <img class="img-fluid" src="/images/mondkapjeSmaller.jpg" alt="Modkapje" />
                     </div>
 
                     <div class="description">

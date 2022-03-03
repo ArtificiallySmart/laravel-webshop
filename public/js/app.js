@@ -5425,9 +5425,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log("Component mounted.");
   }
 });
 
@@ -28318,7 +28322,7 @@ var staticRenderFns = [
           "section",
           {
             staticClass:
-              "d-flex justify-content-center justify-content-lg-between p-4 border-bottom",
+              "\n      d-flex\n      justify-content-center justify-content-lg-between\n      p-4\n      border-bottom\n    ",
           },
           [
             _c("div", { staticClass: "me-5 d-none d-lg-block" }, [
@@ -28365,12 +28369,12 @@ var staticRenderFns = [
                   [
                     _c("h6", { staticClass: "text-uppercase fw-bold mb-4" }, [
                       _c("i", { staticClass: "fas fa-gem me-3" }),
-                      _vm._v("Zulfugar Artwork & Animation\n                "),
+                      _vm._v("Zulfugar Artwork & Animation\n          "),
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n                   \n                    Hi, I am Zulfugar Eyvazov, a 2d artist from Groningen, the Netherlands. I design comics, illustrations for online and offline media, such  as websites, clothing, applications, magazines, covers, infographics, explanatory animations and games.\n                    Please don’t hesitate to contact me:\n                "
+                        "\n            Hi, I am Zulfugar Eyvazov, a 2d artist from Groningen, the\n            Netherlands. I design comics, illustrations for online and offline\n            media, such as websites, clothing, applications, magazines,\n            covers, infographics, explanatory animations and games. Please\n            don’t hesitate to contact me:\n          "
                       ),
                     ]),
                   ]
@@ -28381,9 +28385,7 @@ var staticRenderFns = [
                   { staticClass: "col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" },
                   [
                     _c("h6", { staticClass: "text-uppercase fw-bold mb-4" }, [
-                      _vm._v(
-                        "\n                    Products\n                "
-                      ),
+                      _vm._v("Products"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
@@ -28425,9 +28427,7 @@ var staticRenderFns = [
                   { staticClass: "col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" },
                   [
                     _c("h6", { staticClass: "text-uppercase fw-bold mb-4" }, [
-                      _vm._v(
-                        "\n                    Useful links\n                "
-                      ),
+                      _vm._v("Useful links"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
@@ -28472,7 +28472,7 @@ var staticRenderFns = [
                   },
                   [
                     _c("h6", { staticClass: "text-uppercase fw-bold mb-4" }, [
-                      _vm._v("\n                    Contact\n                "),
+                      _vm._v("Contact"),
                     ]),
                     _vm._v(" "),
                     _c("p", [
@@ -28482,9 +28482,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("p", [
                       _c("i", { staticClass: "fas fa-envelope me-3" }),
-                      _vm._v(
-                        "\n                    info@example.com\n                "
-                      ),
+                      _vm._v("\n            info@example.com\n          "),
                     ]),
                     _vm._v(" "),
                     _c("p", [
@@ -28510,7 +28508,7 @@ var staticRenderFns = [
             staticStyle: { "background-color": "rgba(0, 0, 0, 0.05)" },
           },
           [
-            _vm._v("\n            © 2021 Copyright:\n            "),
+            _vm._v("\n    © 2021 Copyright:\n    "),
             _c(
               "a",
               {
