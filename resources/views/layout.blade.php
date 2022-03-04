@@ -86,7 +86,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Facemask v1</h5>
                             <p class="card-text">€10.00</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Facemask v2</h5>
                             <p class="card-text ">€10.00</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -132,7 +132,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Gymbag</h5>
                             <p class="card-text a">€18,99</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -148,7 +148,7 @@
                             <h5 class="card-title">Teddybeer</h5>
                             <p class="card-text-centre align-items-center d-flex justify-content-center"> €18,99
                             </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -164,7 +164,7 @@
                             <h5 class="card-title">Lotus</h5>
                             <p class="card-text"> €18,99
                             </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -180,7 +180,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Thermos</h5>
                             <p class="card-text">€14,99</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -197,7 +197,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Dragon</h5>
                             <p class="card-text">€14,99</p>
-                            <a href=" #" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
