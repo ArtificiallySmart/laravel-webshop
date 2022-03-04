@@ -118,7 +118,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Coffemug</h5>
                             <p class="card-text ">€14,99</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+
                         </div>
                     </div>
 
@@ -162,7 +162,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Lotus</h5>
-                            <p class="card-text"> €18,99
+
                             </p>
 
                         </div>
