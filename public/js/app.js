@@ -28822,7 +28822,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "w-25 h-10 p-2 inline-block input-group rounded" },
+      { staticClass: "w-auto h-auto p-2 inline-block input-group rounded" },
       [
         _c("input", {
           staticClass: "form-control rounded",

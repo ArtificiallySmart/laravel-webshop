@@ -11311,6 +11311,10 @@ textarea.form-control-lg {
     width: 100%;
   }
 }
+.login-button {
+  border: none;
+}
+
 .header {
   background-color: white;
   margin: 0 auto;
