@@ -185,10 +185,10 @@
             padding: 1.5rem
         }
 
-        .py-4 {
+        /* .py-4 {
             padding-top: 1rem;
             padding-bottom: 1rem
-        }
+        } */
 
         .px-6 {
             padding-left: 1.5rem;
