@@ -5536,7 +5536,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -28823,7 +28822,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "w-25 h-25 p-3 inline-block input-group rounded" },
+      { staticClass: "w-25 h-10 p-2 inline-block input-group rounded" },
       [
         _c("input", {
           staticClass: "form-control rounded",
