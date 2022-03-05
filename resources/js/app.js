@@ -7,9 +7,6 @@
 require('./bootstrap');
 
 
-
-
-
 window.Vue = require('vue').default;
 
 /**
@@ -27,7 +24,8 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('navbar-component', require('./components/NavbarComponent').default);
 Vue.component('footer-component', require('./components/FooterComponent').default);
-Vue. component ('searbar-component', require('./components/SearchbarComponent').default);
+Vue. component ('searchbar-component', require('./components/SearchbarComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

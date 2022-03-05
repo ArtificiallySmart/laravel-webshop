@@ -5572,7 +5572,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 Vue.component('navbar-component', (__webpack_require__(/*! ./components/NavbarComponent */ "./resources/js/components/NavbarComponent.vue")["default"]));
 Vue.component('footer-component', (__webpack_require__(/*! ./components/FooterComponent */ "./resources/js/components/FooterComponent.vue")["default"]));
-Vue.component('searbar-component', (__webpack_require__(/*! ./components/SearchbarComponent */ "./resources/js/components/SearchbarComponent.vue")["default"]));
+Vue.component('searchbar-component', (__webpack_require__(/*! ./components/SearchbarComponent */ "./resources/js/components/SearchbarComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
