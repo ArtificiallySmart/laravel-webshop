@@ -5583,6 +5583,32 @@ var app = new Vue({
   el: '#app'
 });
 
+methods: {
+  var galleryProducts = document.querySelectorAll('.gallery_product');
+  var filterButton = document.querySelectorAll('.filter-button');
+  var filterAll = document.querySelector('#filter-all');
+  filterAll.addEventListener('click', function () {
+    galleryProducts.forEach(function (photo) {
+      photo.style.display = 'block';
+    });
+  });
+  filterButton.forEach(function (button) {
+    button.addEventListener('click', function () {
+      // attribute from button
+      var categoryFromButton = this.getAttribute('category');
+      console.log(categoryFromButton);
+      galleryProducts.forEach(function (prod) {
+        // attribute form picture
+        if (prod.getAttribute('category') == categoryFromButton) {
+          prod.style.display = 'block';
+        } else {
+          prod.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

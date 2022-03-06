@@ -59,9 +59,9 @@
                             <li v-for="detail in details">{{ detail }}</li>
                         </ul> -->
 
-                        <p>
-                            <a href="#" class="btn btn-primary" v-on:click="addToCart">Add to Cart</a>
-                        <div class="cart">
+                        <!-- <p>
+                            <a href="#" class="btn btn-primary" v-on:click="addToCart">Add to Cart</a> -->
+                        <!-- <div class="cart">
                             <p>Cart({{cart}})</p>
                         </div>
 
@@ -71,21 +71,21 @@
                         <div class="colors"> <span></span> <span></span> <span></span> <span></span>
                         </div>
 
-                    </div>
+                    </div> -->
 
 
 
 
 
-                    <!--<shopping-cart></shopping-cart> -->
+                        <!--<shopping-cart></shopping-cart> -->
 
 
-                    <!-- <product-review></product-review> -->
+                        <!-- <product-review></product-review> -->
 
 
 
 
-                    <!-- <div class="row">
+                        <!-- <div class="row">
                         <div class="col-md-3">
                             <span class="sr-only">Four out of Five Stars</span>
                             <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -106,25 +106,25 @@
 
 
 
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
+
+
 
             </div>
 
 
-
-
-
-
-
-
-
-        </div>
-
-
-
-    </div>
-
-
-    <footer-component></footer-component>
+            <footer-component></footer-component>
 
 </body>
