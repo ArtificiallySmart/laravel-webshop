@@ -17,10 +17,10 @@ class Product extends Model
         'stock'
     ];
 
-    public function specs()
-    {
-        return $this->belongsToMany(Spec::class);
-    }
+    // public function specs()
+    // {
+    //     return $this->belongsToMany(Spec::class);
+    // }
 
     public function images()
     {

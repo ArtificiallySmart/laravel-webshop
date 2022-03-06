@@ -46,14 +46,14 @@ class CreateOrdersTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('order_product_has_specs', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('order_products_id');
-            $table->foreign('order_products_id')->references('id')->on('products');
-            $table->unsignedBigInteger('specs_id');
-            $table->foreign('specs_id')->references('id')->on('specs');
-            $table->timestamps();
-        });
+        // Schema::create('order_product_has_specs', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->unsignedBigInteger('order_products_id');
+        //     $table->foreign('order_products_id')->references('id')->on('products');
+        //     $table->unsignedBigInteger('specs_id');
+        //     $table->foreign('specs_id')->references('id')->on('specs');
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -63,8 +63,8 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_product_has_specs');
-        Schema::dropIfExists('order_products');
+        // Schema::dropIfExists('order_product_has_specs');
+        Schema::dropIfExists('order_product');
         Schema::dropIfExists('orders');
         Schema::dropIfExists('payment_methods');
     }

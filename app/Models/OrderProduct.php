@@ -21,8 +21,8 @@ class OrderProduct extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function orderProductSpecs()
-    {
-        return $this->belongsToMany(OrderProductSpec::class);
-    }
+    // public function orderProductSpecs()
+    // {
+    //     return $this->belongsToMany(OrderProductSpec::class);
+    // }
 }
