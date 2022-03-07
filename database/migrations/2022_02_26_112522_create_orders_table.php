@@ -36,24 +36,24 @@ class CreateOrdersTable extends Migration
             $table->foreign('deleted_by')->references('id')->on('users');
         });
 
-        Schema::create('order_products', function (Blueprint $table) {
+        Schema::create('order_product', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')->references('id')->on('orders');
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedSmallInteger('amount');
+            $table->unsignedSmallInteger('amount')->default(1);
             $table->timestamps();
         });
 
-        Schema::create('order_product_has_specs', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('order_products_id');
-            $table->foreign('order_products_id')->references('id')->on('products');
-            $table->unsignedBigInteger('specs_id');
-            $table->foreign('specs_id')->references('id')->on('specs');
-            $table->timestamps();
-        });
+        // Schema::create('order_product_has_specs', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->unsignedBigInteger('order_products_id');
+        //     $table->foreign('order_products_id')->references('id')->on('products');
+        //     $table->unsignedBigInteger('specs_id');
+        //     $table->foreign('specs_id')->references('id')->on('specs');
+        //     $table->timestamps();
+        // });
     }
 
     /**
@@ -63,8 +63,8 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_product_has_specs');
-        Schema::dropIfExists('order_products');
+        // Schema::dropIfExists('order_product_has_specs');
+        Schema::dropIfExists('order_product');
         Schema::dropIfExists('orders');
         Schema::dropIfExists('payment_methods');
     }

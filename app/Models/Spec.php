@@ -9,10 +9,10 @@ class Spec extends Model
 {
     use HasFactory;
 
-    protected $table = 'specs';
+    // protected $table = 'specs';
 
-    public function product()
-    {
-        return $this->hasMany(Product::class);
-    }
+    // public function product()
+    // {
+    //     return $this->hasMany(Product::class);
+    // }
 }

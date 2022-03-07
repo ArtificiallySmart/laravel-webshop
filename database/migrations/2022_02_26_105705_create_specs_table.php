@@ -13,21 +13,21 @@ class CreateSpecsTable extends Migration
      */
     public function up()
     {
-        Schema::create('specs', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table->enum('type', ['colors', 'sizes', 'other']);
-            $table->timestamps();
-        });
+        // Schema::create('specs', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('name')->unique();
+        //     $table->enum('type', ['colors', 'sizes', 'other']);
+        //     $table->timestamps();
+        // });
 
-        Schema::create('product_spec', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedBigInteger('spec_id');
-            $table->foreign('spec_id')->references('id')->on('specs');
-            $table->timestamps();
-        });
+        // Schema::create('product_spec', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->unsignedBigInteger('product_id');
+        //     $table->foreign('product_id')->references('id')->on('products');
+        //     $table->unsignedBigInteger('spec_id');
+        //     $table->foreign('spec_id')->references('id')->on('specs');
+        //     $table->timestamps();
+        // });
 
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
@@ -70,9 +70,9 @@ class CreateSpecsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('product_images');
-        Schema::dropIfExists('product_has_category');
+        Schema::dropIfExists('category_product');
         Schema::dropIfExists('categories');
-        Schema::dropIfExists('product_has_specs');
-        Schema::dropIfExists('specs');
+        // Schema::dropIfExists('product_spec');
+        // Schema::dropIfExists('specs');
     }
 }
