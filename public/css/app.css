@@ -11515,7 +11515,7 @@ p.button:hover {
 
 /* [1] The container */
 .pr-img-hover-zoom {
-  height: 30em;
+  height: 40em;
   /* [1.1] Set it as per your need */
   overflow: hidden;
   /* [1.2] Hide the overflowing of child elements */
@@ -11525,8 +11525,8 @@ p.button:hover {
 }
 
 /* [2] Transition property for smooth transformation of images */
-.pr-img-hover-zoom- img {
-  transition: transform 5s ease;
+.pr-img-hover-zoom img {
+  transition: transform 0.5s ease;
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
