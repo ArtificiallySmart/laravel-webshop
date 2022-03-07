@@ -17,8 +17,8 @@
              <div class="col-md-6">
 
 
-                 <div class="img-hover-zoom">
-                     <img src="/public/images/skeletonTshirt.jpg" class="card-img-top" alt="Skeleton">
+                 <div class="pr-img-hover-zoom">
+                     <img src="/images/skeletonTshirt.jpg" class="card-img-top" alt="Martialarts">
                  </div>
 
 
@@ -37,7 +37,7 @@
 
 
 
-
+                         <button>Add to Cart</button>
 
 
 
