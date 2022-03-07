@@ -4,7 +4,7 @@
 <head>
 
     <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/productpage.scss">
+
     <script src="/js/app.js" defer></script>
 
 </head>
