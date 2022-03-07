@@ -11311,6 +11311,10 @@ textarea.form-control-lg {
     width: 100%;
   }
 }
+.login-button {
+  border: none;
+}
+
 .header {
   background-color: white;
   margin: 0 auto;
@@ -11329,6 +11333,7 @@ textarea.form-control-lg {
   margin-left: auto;
   margin-right: 50px;
   margin-top: auto;
+  margin-bottom: auto;
 }
 
 .navbar {

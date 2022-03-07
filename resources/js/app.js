@@ -7,9 +7,6 @@
 require('./bootstrap');
 
 
-
-
-
 window.Vue = require('vue').default;
 
 /**
@@ -27,6 +24,7 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('navbar-component', require('./components/NavbarComponent').default);
 Vue.component('footer-component', require('./components/FooterComponent').default);
+Vue. component ('searchbar-component', require('./components/SearchbarComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37,3 +35,48 @@ Vue.component('footer-component', require('./components/FooterComponent').defaul
 const app = new Vue({
     el: '#app',
 });
+
+
+
+methods: {
+let galleryProducts = document.querySelectorAll('.gallery_product');
+
+let filterButton = document.querySelectorAll('.filter-button');
+let filterAll = document.querySelector('#filter-all');
+
+filterAll.addEventListener('click', function () {
+    galleryProducts.forEach(photo => {
+        photo.style.display = 'block';
+    });
+});
+
+filterButton.forEach(button => {
+    button.addEventListener('click', function () {
+        // attribute from button
+        let categoryFromButton = this.getAttribute('category');
+        console.log(categoryFromButton)
+
+        galleryProducts.forEach(prod => {
+            // attribute form picture
+            if (prod.getAttribute('category') == categoryFromButton) {
+                prod.style.display = 'block';
+            } else {
+                prod.style.display = 'none';
+            }
+        });
+    });
+});
+
+
+
+
+
+
+
+}
+
+
+
+
+
+

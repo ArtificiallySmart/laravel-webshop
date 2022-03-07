@@ -4,8 +4,11 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
+ 
 
 }
+
 
 
 @media screen and (max-width: 100%) {
@@ -14,8 +17,9 @@
   }
 }
 
-
-
+.login-button{
+  border: none;
+}
 
 .header {
   background-color: rgb(255, 255, 255);
@@ -37,6 +41,7 @@
   margin-left: auto;
   margin-right: 50px;
   margin-top: auto;
+  margin-bottom: auto;
 }
 
 

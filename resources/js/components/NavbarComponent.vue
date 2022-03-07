@@ -26,6 +26,9 @@
         </div>
       </div>
 
+      <searchbar-component></searchbar-component>
+
+      <button class="login-button">Join / Login</button>
       <button @click="$root.showCart()" class="shoppingButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -49,16 +52,12 @@
 </template>
 
 <script>
+import SearchbarComponent from "./SearchbarComponent.vue";
 export default {
+  components: { SearchbarComponent },
   mounted() {
     console.log("Component mounted.");
   },
-
-    
-
-
-
-
 };
 </script>
 
