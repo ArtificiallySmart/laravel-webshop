@@ -11456,3 +11456,80 @@ h5, .h5 {
 .img-hover-zoom:hover img {
   transform: scale(1.5);
 }
+
+.price {
+  color: black;
+  font-size: 22px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+  position: right;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.colors span {
+  display: in-line;
+  border-color: black;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.card {
+  border: none;
+}
+
+#card-body {
+  border: none;
+}
+
+.colors span:nth-child(1) {
+  background-color: black;
+}
+
+.colors span:nth-child(2) {
+  background-color: rgba(102, 102, 102, 0.322);
+}
+
+.colors span:nth-child(3) {
+  background-color: #0b5264;
+}
+
+.colors span:nth-child(4) {
+  background-color: #07255e;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+  height: 40em;
+  /* [1.1] Set it as per your need */
+  overflow: hidden;
+  /* [1.2] Hide the overflowing of child elements */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom- img {
+  transition: transform 0.5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(2.1);
+}

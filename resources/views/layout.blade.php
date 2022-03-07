@@ -19,7 +19,7 @@
 
                     <div class="card" style="width: 18rem;">
                         <div class="img-hover-zoom">
-                            <a href="productpage.html"> <img src="/images/Tshirts.png" class="card-img-top" alt="Skeleton"></a>
+                            <a href="product.blade.php"> <img src="/images/Tshirts.png" class="card-img-top" alt="Skeleton"></a>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Skeleton</h5>
