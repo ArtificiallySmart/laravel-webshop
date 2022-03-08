@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +21,11 @@ Route::get('/', function () {
     return view('layout');
 });
 
+Route::get('/product/{product}', [ProductController::class, 'index'])->name('product');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 Auth::routes();
-
-
 
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
@@ -30,4 +34,4 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [HomeController::class, 'index'])->name('home');

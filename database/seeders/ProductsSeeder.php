@@ -17,7 +17,15 @@ class ProductsSeeder extends Seeder
      */
     public function run()
     {
-
+        $data = [
+            [
+                'name' => 'skeleton',
+                'description' => 'This is the description of the skeleton shirt',
+                'price' => 19.99,
+                'thumbnail' => '/images/Tshirts.png',
+                'stock' => true,
+            ],
+        ];
         Product::factory(20)->create();
         // $specs = Spec::all();
         $categories = Category::all();

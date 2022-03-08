@@ -11,18 +11,23 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        if (!$request->ajax()) {
+            return view('layout');
+        }
+        $newProducts = '';
+        $popularProducts = '';
+        $randomProducts = '';
     }
 }
