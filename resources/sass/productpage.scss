@@ -1,4 +1,4 @@
-//  .p-card {
+//  .product-section {
 //      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 //      max-width: 300px;
 //      margin: auto;
@@ -20,17 +20,16 @@
     font-size: 20px;
 }
 
-.p-button {
+.btn-primary {
     border: none;
-    outline: 0;
-    padding: 12px;
+    
+    
     color: white;
     background-color: rgb(128, 105, 105);
-    text-align: center;
-    cursor: pointer;
-    width: 50%;
+cursor: pointer;
+    width: 20%;
     font-size: 18px;
-    position: right;
+   
    
 }
 
