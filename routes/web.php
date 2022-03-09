@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('product');
+    return view('layout');
 });
 
 Auth::routes();

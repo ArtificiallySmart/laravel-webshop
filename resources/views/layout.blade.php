@@ -113,7 +113,7 @@
                             <img src="/images/kopje.jpg" class="card-img-top" alt="koffieMok">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Coffemug</h5>
+                            <h5 class="card-title">Coffeemug</h5>
                             <p class="card-text ">€14,99</p>
 
                         </div>
@@ -155,10 +155,10 @@
 
                     <div class="card" style="width: 18rem;">
                         <div class="img-hover-zoom">
-                            <img src="/images/warrior flower.jpg" class="card-img-top" alt="lotus">
+                            <img src="/images/warrior flower.jpg" class="card-img-top" alt="flower">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Lotus</h5>
+                            <h5 class="card-title">WarriorFlower</h5>
 
                             </p>
 
@@ -184,6 +184,56 @@
                 </div>
 
 
+                <div class="col gallery_product text-center" category="Accessoires">
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-hover-zoom">
+                            <img src="/images/pet.jpg" class="card-img-top" alt="cap">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cap</h5>
+                            <p class="card-text">€16,99</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col gallery_product text-center" category="Accessoires">
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-hover-zoom">
+                            <img src="/images/kussen.jpg" class="card-img-top" alt="pillow">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Pillow</h5>
+                            <p class="card-text">€12,99</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col gallery_product text-center" category="Accessoires">
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-hover-zoom">
+                            <img src="/images/muismat.jpg" class="card-img-top" alt="mousepad">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mousepad</h5>
+                            <p class="card-text">€10,99</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
 
                 <div class="col gallery_product text-center" category="Male">
 
@@ -200,142 +250,30 @@
 
                 </div>
 
+
+
+
+                <div class="col gallery_product text-center" category="Male">
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-hover-zoom">
+                            <img src="/images/tanktop.jpg" class="card-img-top" alt="tanktop">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Dragon</h5>
+                            <p class="card-text">€21,40</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
     </section>
 
-    <!--------------------------------------------------CART ------------------------------------------------------------------>
-    <div class="cart">
-        <!--<!-- Title -->
-        <div class="Cart">
-            <p>Cart</p>
-        </div>
 
-        <!-- Product #1 -->
-        <div class="container">
-            <div class="row text-center">
-                <div class="item">
-                    <div class="buttons">
-                        <span class="delete-btn"></span>
-                        <span class="like-btn"></span>
-                    </div>
-
-                    <div class="imageSmaller">
-                        <img class="img-fluid" src="/images/tshirtssmallerCopy.png" alt="Skeleton Shirt SMaller">
-                    </div>
-
-                    <div class="description">
-                        <span>Skeleton Shirt</span>
-
-                    </div>
-
-                    <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="1">
-                        <button class="minus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
-                        </button>
-                    </div>
-
-
-
-                    <div class="total-price">19.99</div>
-                </div>
-
-                <!-- Product #2 -->
-                <div class="item">
-                    <div class="buttons">
-                        <span class="delete-btn"></span>
-                        <span class="like-btn"></span>
-                    </div>
-
-                    <div class="imageSmaller">
-                        <img class="img-fluid" src="/images/martialartsSmaller.png" alt="" />
-                    </div>
-
-                    <div class="description">
-                        <span>martialarts</span>
-
-                    </div>
-
-                    <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="1">
-                        <button class="minus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
-                        </button>
-                    </div>
-
-                    <div class="total-price"></div>
-                </div>
-
-                <!-- Product #3 -->
-                <div class="item">
-                    <div class="buttons">
-                        <span class="delete-btn"></span>
-                        <span class="like-btn"></span>
-                    </div>
-
-                    <div class="imageSmaller">
-                        <img class="img-fluid" src="/images/kidssmaller.png" alt="" />
-                    </div>
-
-                    <div class="description">
-                        <span>hoodie</span>
-
-                    </div>
-
-                    <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="1">
-                        <button class="minus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
-                        </button>
-                    </div>
-
-                    <div class="total-price">35,99</div>
-                </div>
-
-
-                <!--Product #4-->
-
-                <div class="item">
-                    <div class="buttons">
-                        <span class="delete-btn"></span>
-                        <span class="like-btn"></span>
-                    </div>
-
-                    <div class="imageSmaller">
-                        <img class="img-fluid" src="/images/mondkapjeSmaller.jpg" alt="Modkapje" />
-                    </div>
-
-                    <div class="description">
-                        <span>mondkapje</span>
-
-                    </div>
-
-                    <div class="quantity">
-                        <button class="plus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/plus.svg" alt="" />
-                        </button>
-                        <input type="text" name="name" value="1">
-                        <button class="minus-btn" type="button" name="button">
-                            <img src="https://designmodo.com/demo/shopping-cart/minus.svg" alt="" />
-                        </button>
-                    </div>
-
-                    <div class="total-price">10,00</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer-component></footer-component>
 
