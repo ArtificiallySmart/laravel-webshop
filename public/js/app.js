@@ -5593,13 +5593,16 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./products.js */ "./resources/js/products.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./products.js */ "./resources/js/products.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
@@ -5627,11 +5630,33 @@ Vue.component('productcard-component', (__webpack_require__(/*! ./components/_pr
 
 var app = new Vue({
   el: '#app',
-  data: function data() {
-    return {
-      imageRoot: '/images/',
-      products: _products_js__WEBPACK_IMPORTED_MODULE_0__.products
-    };
+  data: {
+    imageRoot: '/images/',
+    products: _products_js__WEBPACK_IMPORTED_MODULE_1__.products,
+    newProducts: [],
+    popularProducts: [],
+    randomProducts: []
+  },
+  created: function created() {
+    this.getProducts;
+  },
+  methods: {
+    getProducts: function getProducts() {
+      var self = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default()({
+        method: 'get',
+        url: '/',
+        headers: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
+      }).then(function (response) {
+        if (response.data.success) {
+          self.newProducts = response.data.newProducts;
+          self.popularProducts = response.data.popularProducts;
+          self.randomProducts = response.data.randomProducts;
+        }
+      })["catch"](function (error) {});
+    }
   }
 }); // data:{
 //         products: products
@@ -41386,6 +41411,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

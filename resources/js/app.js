@@ -5,7 +5,8 @@
  */
 
 require('./bootstrap');
-import {products} from './products.js'
+import axios from 'axios';
+import { products } from './products.js'
 
 
 window.Vue = require('vue').default;
@@ -25,7 +26,7 @@ window.Vue = require('vue').default;
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('navbar-component', require('./components/NavbarComponent').default);
 Vue.component('footer-component', require('./components/FooterComponent').default);
-Vue. component ('searchbar-component', require('./components/SearchbarComponent').default);
+Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
 Vue.component('productcard-component', require('./components/_productcardComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,13 +36,37 @@ Vue.component('productcard-component', require('./components/_productcardCompone
 
 const app = new Vue({
     el: '#app',
-    data(){
-        return{
-            imageRoot:'/images/',
-            products:products,
+    data: {
+        imageRoot: '/images/',
+        products: products,
+        newProducts: [],
+        popularProducts: [],
+        randomProducts: []
+    },
+    created() {
+        this.getProducts
+    },
+    methods: {
+        getProducts() {
+            let self = this;
+            axios({
+                method: 'get',
+                url: '/',
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+            }).then(function (response) {
+                if (response.data.success) {
+                    self.newProducts = response.data.newProducts;
+                    self.popularProducts = response.data.popularProducts;
+                    self.randomProducts = response.data.randomProducts;
+                }
+            }).catch(function (error) {
 
+            });
         }
     }
+
 })
 
 // data:{
@@ -51,33 +76,32 @@ const app = new Vue({
 
 
 methods: {
-let galleryProducts = document.querySelectorAll('.gallery_product');
+    let galleryProducts = document.querySelectorAll('.gallery_product');
+    let filterButton = document.querySelectorAll('.filter-button');
+    let filterAll = document.querySelector('#filter-all');
 
-let filterButton = document.querySelectorAll('.filter-button');
-let filterAll = document.querySelector('#filter-all');
-
-filterAll.addEventListener('click', function () {
-    galleryProducts.forEach(photo => {
-        photo.style.display = 'block';
-    });
-});
-
-filterButton.forEach(button => {
-    button.addEventListener('click', function () {
-        // attribute from button
-        let categoryFromButton = this.getAttribute('category');
-        console.log(categoryFromButton)
-
-        galleryProducts.forEach(prod => {
-            // attribute form picture
-            if (prod.getAttribute('category') == categoryFromButton) {
-                prod.style.display = 'block';
-            } else {
-                prod.style.display = 'none';
-            }
+    filterAll.addEventListener('click', function () {
+        galleryProducts.forEach(photo => {
+            photo.style.display = 'block';
         });
     });
-});
+
+    filterButton.forEach(button => {
+        button.addEventListener('click', function () {
+            // attribute from button
+            let categoryFromButton = this.getAttribute('category');
+            console.log(categoryFromButton)
+
+            galleryProducts.forEach(prod => {
+                // attribute form picture
+                if (prod.getAttribute('category') == categoryFromButton) {
+                    prod.style.display = 'block';
+                } else {
+                    prod.style.display = 'none';
+                }
+            });
+        });
+    });
 
 
 
