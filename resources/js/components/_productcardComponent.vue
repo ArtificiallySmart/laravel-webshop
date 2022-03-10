@@ -2,7 +2,7 @@
   <div class="col gallery_product" :category="product.category">
     <div class="card" style="width: 18rem">
       <div class="img-hover-zoom">
-        <a :href="'/productpage/' + product.id"
+        <a :href="'/product/' + product.id"
           ><img class="card-img-top" :src="`/images/` + product.thumbnail"
         /></a>
       </div>

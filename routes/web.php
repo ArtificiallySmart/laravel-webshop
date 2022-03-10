@@ -18,7 +18,7 @@ use App\Models\Product;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return view('product');
 });
 
 Route::get('/product/{product}', [ProductController::class, 'index'])->name('product');
