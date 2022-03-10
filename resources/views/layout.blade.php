@@ -15,9 +15,14 @@
 
         <div class="container">
             <div class="row text text-center">
-                <productcard-component v-for="product in products" :product="product">
+                <productcard-component v-for="product in NewProducts" :product="product">
                 </productcard-component>
-
+                <productcard-component v-for="product in PopularProducts" :product="product">
+                </productcard-component>
+                <productcard-component v-for="product in RandomProducts" :product="product">
+                </productcard-component>
+            </div>
+        </div>
 
 
 
