@@ -1,35 +1,39 @@
-// .card {
-//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-//     max-width: 300px;
-//     margin: auto;
-//     text-align: left;
-//     font-family: arial;
-//     border: none;
-// }
+//  .product-section {
+//      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+//      max-width: 300px;
+//      margin: auto;
+//      text-align: left;
+//      font-family: arial;
+//      border: none;
+
+
+* {
+
+  background-color: rgb(255, 255, 255);
+}
 
 
 
 
-
-.price {
+.p-price {
     color: rgb(0, 0, 0);
-    font-size: 22px;
+    font-size: 20px;
 }
 
-.button {
+.btn-primary {
     border: none;
-    outline: 0;
-    padding: 12px;
+    
+    
     color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 50%;
+    background-color: rgb(128, 105, 105);
+cursor: pointer;
+    width: 20%;
     font-size: 18px;
-    position: right;
+   
+   
 }
 
-.button:hover {
+p.button:hover {
     opacity: 0.7;
 }
 
@@ -84,7 +88,7 @@
 
 
 /* [1] The container */
-.img-hover-zoom {
+.pr-img-hover-zoom {
     height: 40em;
     /* [1.1] Set it as per your need */
     overflow: hidden;
@@ -93,14 +97,14 @@
 }
 
 /* [2] Transition property for smooth transformation of images */
-.img-hover-zoom- img {
+.pr-img-hover-zoom img {
     transition: transform .5s ease;
 
 }
 
 /* [3] Finally, transforming the image when container gets hovered */
-.img-hover-zoom:hover img {
-    transform: scale(2.1);
+.pr-img-hover-zoom:hover img {
+    transform: scale(1.5);
 
 
 }
