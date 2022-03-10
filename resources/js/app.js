@@ -44,11 +44,13 @@ const app = new Vue({
         randomProducts: []
     },
     created() {
-        this.getProducts
+        this.getProducts(),
+            console.log("created")
     },
     methods: {
         getProducts() {
             let self = this;
+            console.log("inside axios")
             axios({
                 method: 'get',
                 url: '/',

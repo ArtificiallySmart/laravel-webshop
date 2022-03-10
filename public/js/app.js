@@ -5638,11 +5638,12 @@ var app = new Vue({
     randomProducts: []
   },
   created: function created() {
-    this.getProducts;
+    this.getProducts(), console.log("created");
   },
   methods: {
     getProducts: function getProducts() {
       var self = this;
+      console.log("inside axios");
       axios__WEBPACK_IMPORTED_MODULE_0___default()({
         method: 'get',
         url: '/',
@@ -29156,7 +29157,7 @@ var render = function () {
           _c("a", { attrs: { href: "/productpage/" + _vm.product.id } }, [
             _c("img", {
               staticClass: "card-img-top",
-              attrs: { src: _vm.product.image },
+              attrs: { src: "/images/" + _vm.product.thumbnail },
             }),
           ]),
         ]),

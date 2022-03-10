@@ -3,7 +3,7 @@
     <div class="card" style="width: 18rem">
       <div class="img-hover-zoom">
         <a :href="'/productpage/' + product.id"
-          ><img class="card-img-top" :src="product.image"
+          ><img class="card-img-top" :src="`/images/` + product.thumbnail"
         /></a>
       </div>
 

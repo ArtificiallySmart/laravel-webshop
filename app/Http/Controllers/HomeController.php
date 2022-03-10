@@ -44,6 +44,7 @@ class HomeController extends Controller
             ->get();
 
         echo json_encode([
+            "success" => true,
             "newProducts" => $newProducts,
             "popularProducts" => $popularProducts,
             "randomProducts" => $randomProducts
