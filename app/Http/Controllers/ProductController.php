@@ -8,8 +8,16 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
-    public function index(Product $product)
+    public function index(Product $product, Request $request)
     {
-        return view('product', ['product' => $product]);
+        if (!$request->ajax()) {
+            return view('product');
+        }
+
+        echo json_encode(
+            [
+                'product' => $product
+            ]
+        );
     }
 }
