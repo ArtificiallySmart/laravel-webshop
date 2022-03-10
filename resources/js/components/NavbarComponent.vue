@@ -56,7 +56,7 @@ import SearchbarComponent from "./SearchbarComponent.vue";
 export default {
   components: { SearchbarComponent },
   mounted() {
-    console.log("Component mounted.");
+    console.log("Navbar Component mounted.");
   },
 };
 </script>

@@ -5429,7 +5429,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
-    console.log("Component mounted.");
+    console.log("Footer Component mounted.");
   }
 });
 
@@ -5506,7 +5506,7 @@ __webpack_require__.r(__webpack_exports__);
     SearchbarComponent: _SearchbarComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   mounted: function mounted() {
-    console.log("Component mounted.");
+    console.log("Navbar Component mounted.");
   }
 });
 
@@ -5538,7 +5538,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
-    console.log("Component mounted.");
+    console.log("Searchbar Component mounted.");
   }
 });
 
@@ -5573,10 +5573,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
-  }
+  },
+  props: ["product"]
 });
 
 /***/ }),
@@ -5585,14 +5589,18 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./products.js */ "./resources/js/products.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
 
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
 /**
@@ -5618,11 +5626,17 @@ Vue.component('productcard-component', (__webpack_require__(/*! ./components/_pr
  */
 
 var app = new Vue({
-  el: '#app' // data:{
-  //     products: products
-  // },
-
-});
+  el: '#app',
+  data: function data() {
+    return {
+      imageRoot: '/images/',
+      products: _products_js__WEBPACK_IMPORTED_MODULE_0__.products
+    };
+  }
+}); // data:{
+//         products: products
+//     },
+// })
 
 methods: {
   var galleryProducts = document.querySelectorAll('.gallery_product');
@@ -5685,6 +5699,112 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/products.js":
+/*!**********************************!*\
+  !*** ./resources/js/products.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "products": () => (/* binding */ products)
+/* harmony export */ });
+var imageRoot = '/images/';
+var products = [{
+  id: 1,
+  name: 'Skeleton',
+  image: imageRoot + 'Tshirts.png',
+  price: '€19,99',
+  category: 'Male'
+}, {
+  id: 2,
+  name: 'MartialArts',
+  image: imageRoot + 'martialarts.jpg',
+  price: '€24,99',
+  category: 'Female'
+}, {
+  id: 3,
+  name: 'Lotus',
+  image: imageRoot + 'lotus.jpg',
+  price: '€25,55',
+  category: 'Female'
+}, {
+  id: 4,
+  name: 'KidsSweater',
+  image: imageRoot + 'kidsLangeMouwen.jpg',
+  price: '€30,65',
+  category: 'Kids'
+}, {
+  id: 5,
+  name: 'Facemask v1',
+  image: imageRoot + 'mondkapjeSmaller.jpg',
+  price: '€10,00',
+  category: 'Accessoires'
+}, {
+  id: 6,
+  name: 'Facemask v2',
+  image: imageRoot + 'syntheticMondkapje.jpg',
+  price: '€10,00',
+  category: 'Accessoires'
+}, {
+  id: 7,
+  name: 'Gymbag',
+  image: imageRoot + 'sporttas.jpg ',
+  price: '€18,99',
+  category: 'Accessoires'
+}, {
+  id: 8,
+  name: 'Dragon',
+  image: imageRoot + 'dragons.jpg',
+  price: '€14,99',
+  category: 'Male'
+}, {
+  id: 9,
+  name: 'Thermos',
+  image: imageRoot + 'thermos.jpg',
+  price: '€14,99',
+  category: 'Accessoires'
+}, {
+  id: 10,
+  name: 'Knuffelbeer',
+  image: imageRoot + 'knuffelbeer.jpg',
+  price: '€10,00',
+  category: 'Kids'
+}, {
+  id: 11,
+  name: 'Warrior Flower',
+  image: imageRoot + 'warrior flower.jpg',
+  price: '€17,00',
+  category: 'Male'
+}, {
+  id: 12,
+  name: 'Coffeemug',
+  image: imageRoot + 'kopje.jpg',
+  price: '€14,99',
+  category: 'Accessoires'
+}, {
+  id: 13,
+  name: 'Pillow',
+  image: imageRoot + 'kussen.jpg',
+  price: '€12,99',
+  category: 'Accessoires'
+}, {
+  id: 14,
+  name: 'Cap',
+  image: imageRoot + 'pet.jpg',
+  price: '€16,99',
+  category: 'Accessoires'
+}, {
+  id: 15,
+  name: 'Mousepad',
+  image: imageRoot + 'muismat.jpg',
+  price: '€16,99',
+  category: 'Accessoires'
+}];
 
 /***/ }),
 
@@ -29007,11 +29127,13 @@ var render = function () {
     },
     [
       _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
-        _c("a", { attrs: { href: "/productpage/" + _vm.product.id } }, [
-          _c("img", {
-            staticClass: "card-img-top",
-            attrs: { src: _vm.product.image },
-          }),
+        _c("div", { staticClass: "img-hover-zoom" }, [
+          _c("a", { attrs: { href: "/productpage/" + _vm.product.id } }, [
+            _c("img", {
+              staticClass: "card-img-top",
+              attrs: { src: _vm.product.image },
+            }),
+          ]),
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "card-body" }, [

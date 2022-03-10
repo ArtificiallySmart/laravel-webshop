@@ -1,6 +1,5 @@
-let imageRoot = '/public/images/'
-
-let products = [
+let imageRoot = '/images/'
+export let products = [
     {
         id: 1,
         name: 'Skeleton',
@@ -32,7 +31,7 @@ let products = [
     {
         id: 5,
         name: 'Facemask v1',
-        image: imageRoot + 'modnkapjeSmaller.jpg',
+        image: imageRoot + 'mondkapjeSmaller.jpg',
         price: '€10,00',
         category: 'Accessoires'
     },
@@ -76,7 +75,7 @@ let products = [
         id: 11,
         name: 'Warrior Flower',
         image: imageRoot + 'warrior flower.jpg',
-        price: '€10,00',
+        price: '€17,00',
         category: 'Male'
     },
 
@@ -85,7 +84,7 @@ let products = [
         name: 'Coffeemug',
         image: imageRoot + 'kopje.jpg',
         price: '€14,99',
-        category: 'Male'
+        category: 'Accessoires'
     },
 
 
@@ -104,13 +103,19 @@ let products = [
         id: 14,
         name: 'Cap',
         image: imageRoot + 'pet.jpg',
-        price: '€10,00',
+        price: '€16,99',
         category: 'Accessoires'
     },
 
 
 
-
+    {
+        id: 15,
+        name: 'Mousepad',
+        image: imageRoot + 'muismat.jpg',
+        price: '€16,99',
+        category: 'Accessoires'
+    },
 
     
 

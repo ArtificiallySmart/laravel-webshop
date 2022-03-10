@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+import {products} from './products.js'
 
 
 window.Vue = require('vue').default;
@@ -34,11 +35,19 @@ Vue.component('productcard-component', require('./components/_productcardCompone
 
 const app = new Vue({
     el: '#app',
-    // data:{
-    //     products: products
-    // },
-});
+    data(){
+        return{
+            imageRoot:'/images/',
+            products:products,
 
+        }
+    }
+})
+
+// data:{
+//         products: products
+//     },
+// })
 
 
 methods: {
