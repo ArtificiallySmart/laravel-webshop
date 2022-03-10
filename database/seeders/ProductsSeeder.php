@@ -50,14 +50,14 @@ class ProductsSeeder extends Seeder
                 'name' => 'Facemask v1',
                 'description' => 'This is the description of the Facemask v1 item',
                 'price' => 10.00,
-                'thumbnail' => 'modnkapjeSmaller.jpg',
+                'thumbnail' => 'mondkapjeSmaller.jpg',
                 'stock' => true,
             ],
             [
                 'name' => 'Facemask v2',
                 'description' => 'This is the description of the Facemask v2 item',
                 'price' => 10.00,
-                'thumbnail' => 'syntheticMondkapje,jpg',
+                'thumbnail' => 'syntheticMondkapje.jpg',
                 'stock' => true,
             ],
             [
