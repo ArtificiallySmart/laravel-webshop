@@ -11468,15 +11468,12 @@ h5, .h5 {
 
 .btn-primary {
   border: none;
+  display: inline;
   color: white;
   background-color: #806969;
   cursor: pointer;
   width: 20%;
   font-size: 18px;
-}
-
-p.button:hover {
-  opacity: 0.7;
 }
 
 .colors span {
@@ -11487,6 +11484,7 @@ p.button:hover {
   height: 20px;
   border-radius: 50%;
   cursor: pointer;
+  padding: 0 10px 10px 0;
 }
 
 .card {

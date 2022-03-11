@@ -23,6 +23,13 @@
               just hanging out with friends!
             </p>
 
+            <ul>
+              <li>bio T-shirt met V-hals van Stanley & Stella</li>
+              <li>classic model</li>
+              <li>material:100% cotton</li>
+              <li>soft fabric quality 155 g/m²</li>
+            </ul>
+
             <span>Available colors</span>
             <div class="colors">
               <span></span> <span></span> <span></span> <span></span>
@@ -74,4 +81,4 @@ export default {
 
 
 
-// 
+

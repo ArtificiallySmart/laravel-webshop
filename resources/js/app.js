@@ -30,6 +30,7 @@ Vue.component('footer-component', require('./components/FooterComponent').defaul
 Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
 Vue.component('productcard-component', require('./components/_productcardComponent').default);
 Vue.component('productpage-component', require('./components/productpageComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

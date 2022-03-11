@@ -5267,15 +5267,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -5597,6 +5588,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _productcardComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_productcardComponent.vue */ "./resources/js/components/_productcardComponent.vue");
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -28814,30 +28812,9 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div")
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _vm._v("I'm an example component."),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -29394,6 +29371,18 @@ var staticRenderFns = [
                   _vm._v(
                     "\n            Men's T-shirt. We will print the product for you after you place\n            the order. A t-shirt with an awesome design for a night out or\n            just hanging out with friends!\n          "
                   ),
+                ]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _vm._v("bio T-shirt met V-hals van Stanley & Stella"),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("classic model")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("material:100% cotton")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("soft fabric quality 155 g/m²")]),
                 ]),
                 _vm._v(" "),
                 _c("span", [_vm._v("Available colors")]),
