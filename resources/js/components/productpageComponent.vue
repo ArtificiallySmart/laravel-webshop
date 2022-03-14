@@ -1,3 +1,4 @@
+
 <template>
   <div class="container" id="product-section">
     <div class="row">
@@ -22,13 +23,7 @@
               the order. A t-shirt with an awesome design for a night out or
               just hanging out with friends!
             </p>
-
-            <ul>
-              <li>bio T-shirt met V-hals van Stanley & Stella</li>
-              <li>classic model</li>
-              <li>material:100% cotton</li>
-              <li>soft fabric quality 155 g/m²</li>
-            </ul>
+            <details-component></details-component>
 
             <span>Available colors</span>
             <div class="colors">
@@ -36,6 +31,7 @@
             </div>
           </div>
         </div>
+
         <div class="text-right">
           <button type="button" class="btn btn-primary">Add To Cart</button>
         </div>
@@ -65,9 +61,11 @@
 </template>
 
 <script>
+import DetailsComponent from "./DetailsComponent.vue";
+import StockComponent from "./StockComponent.vue";
 import _productcardComponent from "./_productcardComponent.vue";
 export default {
-  components: { _productcardComponent },
+  components: { _productcardComponent, DetailsComponent, StockComponent },
   mounted() {
     console.log("Productpage Component mounted.");
   },
