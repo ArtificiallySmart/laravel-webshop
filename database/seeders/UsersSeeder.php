@@ -31,9 +31,9 @@ class UsersSeeder extends Seeder
         User::factory(10)
             ->create()
             ->each(function ($user) {
-                Address::factory()
-                    ->create(['user_id' => $user->id]);
                 PhoneNumber::factory()
+                    ->create(['user_id' => $user->id]);
+                Address::factory()
                     ->create(['user_id' => $user->id]);
             });
     }

@@ -46,8 +46,8 @@ const app = new Vue({
         newProducts: [],
         popularProducts: [],
         randomProducts: [],
-        
-        
+
+
     },
     created() {
         this.getProducts(),
@@ -59,7 +59,7 @@ const app = new Vue({
             console.log("inside axios")
             axios({
                 method: 'get',
-                url: '/',
+                url: '/getproducts',
                 headers: {
                     "X-Requested-With": "XMLHttpRequest"
                 }
@@ -80,41 +80,34 @@ const app = new Vue({
 
 
 
-methods: {
-    let galleryProducts = document.querySelectorAll('.gallery_product');
-    let filterButton = document.querySelectorAll('.filter-button');
-    let filterAll = document.querySelector('#filter-all');
+// methods: {
+//     let galleryProducts = document.querySelectorAll('.gallery_product');
+//     let filterButton = document.querySelectorAll('.filter-button');
+//     let filterAll = document.querySelector('#filter-all');
 
-    filterAll.addEventListener('click', function () {
-        galleryProducts.forEach(photo => {
-            photo.style.display = 'block';
-        });
-    });
+//     filterAll.addEventListener('click', function () {
+//         galleryProducts.forEach(photo => {
+//             photo.style.display = 'block';
+//         });
+//     });
 
-    filterButton.forEach(button => {
-        button.addEventListener('click', function () {
-            // attribute from button
-            let categoryFromButton = this.getAttribute('category');
-            console.log(categoryFromButton)
+//     filterButton.forEach(button => {
+//         button.addEventListener('click', function () {
+//             // attribute from button
+//             let categoryFromButton = this.getAttribute('category');
+//             console.log(categoryFromButton)
 
-            galleryProducts.forEach(prod => {
-                // attribute form picture
-                if (prod.getAttribute('category') == categoryFromButton) {
-                    prod.style.display = 'block';
-                } else {
-                    prod.style.display = 'none';
-                }
-            });
-        });
-    });
-
-
-
-
-
-
-
-}
+//             galleryProducts.forEach(prod => {
+//                 // attribute form picture
+//                 if (prod.getAttribute('category') == categoryFromButton) {
+//                     prod.style.display = 'block';
+//                 } else {
+//                     prod.style.display = 'none';
+//                 }
+//             });
+//         });
+//     });
+// }
 
 
 

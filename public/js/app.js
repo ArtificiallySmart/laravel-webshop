@@ -5761,7 +5761,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
       console.log("inside axios");
       axios__WEBPACK_IMPORTED_MODULE_0___default()({
         method: 'get',
-        url: '/',
+        url: '/getproducts',
         headers: {
           "X-Requested-With": "XMLHttpRequest"
         }
@@ -5774,33 +5774,31 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
       })["catch"](function (error) {});
     }
   }
-});
-
-methods: {
-  var galleryProducts = document.querySelectorAll('.gallery_product');
-  var filterButton = document.querySelectorAll('.filter-button');
-  var filterAll = document.querySelector('#filter-all');
-  filterAll.addEventListener('click', function () {
-    galleryProducts.forEach(function (photo) {
-      photo.style.display = 'block';
-    });
-  });
-  filterButton.forEach(function (button) {
-    button.addEventListener('click', function () {
-      // attribute from button
-      var categoryFromButton = this.getAttribute('category');
-      console.log(categoryFromButton);
-      galleryProducts.forEach(function (prod) {
-        // attribute form picture
-        if (prod.getAttribute('category') == categoryFromButton) {
-          prod.style.display = 'block';
-        } else {
-          prod.style.display = 'none';
-        }
-      });
-    });
-  });
-}
+}); // methods: {
+//     let galleryProducts = document.querySelectorAll('.gallery_product');
+//     let filterButton = document.querySelectorAll('.filter-button');
+//     let filterAll = document.querySelector('#filter-all');
+//     filterAll.addEventListener('click', function () {
+//         galleryProducts.forEach(photo => {
+//             photo.style.display = 'block';
+//         });
+//     });
+//     filterButton.forEach(button => {
+//         button.addEventListener('click', function () {
+//             // attribute from button
+//             let categoryFromButton = this.getAttribute('category');
+//             console.log(categoryFromButton)
+//             galleryProducts.forEach(prod => {
+//                 // attribute form picture
+//                 if (prod.getAttribute('category') == categoryFromButton) {
+//                     prod.style.display = 'block';
+//                 } else {
+//                     prod.style.display = 'none';
+//                 }
+//             });
+//         });
+//     });
+// }
 
 /***/ }),
 
