@@ -45,11 +45,11 @@ class User extends Authenticatable
 
     public function address()
     {
-        $this->hasOne(Address::class);
+        return $this->hasOne(Address::class);
     }
 
     public function phoneNumber()
     {
-        $this->hasOne(Phone_number::class);
+        return $this->hasOne(PhoneNumber::class);
     }
 }

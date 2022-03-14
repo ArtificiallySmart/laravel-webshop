@@ -17,7 +17,8 @@ class Address extends Model
      */
     protected $fillable = [
         'street',
-        'house_number',        'house_number_addition',
+        'house_number',
+        'house_number_addition',
         'zipcode',
         'city',
         'country'

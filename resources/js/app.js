@@ -28,6 +28,7 @@ Vue.component('navbar-component', require('./components/NavbarComponent').defaul
 Vue.component('footer-component', require('./components/FooterComponent').default);
 Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
 Vue.component('productcard-component', require('./components/_productcardComponent').default);
+Vue.component('user-component', require('./components/UserComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -53,7 +54,7 @@ const app = new Vue({
             console.log("inside axios")
             axios({
                 method: 'get',
-                url: '/',
+                url: '/getproducts',
                 headers: {
                     "X-Requested-With": "XMLHttpRequest"
                 }
@@ -77,41 +78,34 @@ const app = new Vue({
 // })
 
 
-methods: {
-    let galleryProducts = document.querySelectorAll('.gallery_product');
-    let filterButton = document.querySelectorAll('.filter-button');
-    let filterAll = document.querySelector('#filter-all');
+// methods: {
+//     let galleryProducts = document.querySelectorAll('.gallery_product');
+//     let filterButton = document.querySelectorAll('.filter-button');
+//     let filterAll = document.querySelector('#filter-all');
 
-    filterAll.addEventListener('click', function () {
-        galleryProducts.forEach(photo => {
-            photo.style.display = 'block';
-        });
-    });
+//     filterAll.addEventListener('click', function () {
+//         galleryProducts.forEach(photo => {
+//             photo.style.display = 'block';
+//         });
+//     });
 
-    filterButton.forEach(button => {
-        button.addEventListener('click', function () {
-            // attribute from button
-            let categoryFromButton = this.getAttribute('category');
-            console.log(categoryFromButton)
+//     filterButton.forEach(button => {
+//         button.addEventListener('click', function () {
+//             // attribute from button
+//             let categoryFromButton = this.getAttribute('category');
+//             console.log(categoryFromButton)
 
-            galleryProducts.forEach(prod => {
-                // attribute form picture
-                if (prod.getAttribute('category') == categoryFromButton) {
-                    prod.style.display = 'block';
-                } else {
-                    prod.style.display = 'none';
-                }
-            });
-        });
-    });
-
-
-
-
-
-
-
-}
+//             galleryProducts.forEach(prod => {
+//                 // attribute form picture
+//                 if (prod.getAttribute('category') == categoryFromButton) {
+//                     prod.style.display = 'block';
+//                 } else {
+//                     prod.style.display = 'none';
+//                 }
+//             });
+//         });
+//     });
+// }
 
 
 

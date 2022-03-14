@@ -24,8 +24,13 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
+        return view('layout');
+    }
+
+    public function getproducts(Request $request)
+    {
         if (!$request->ajax()) {
-            return view('layout');
+            return redirect('/');
         }
         $newProducts =
             DB::table('products')

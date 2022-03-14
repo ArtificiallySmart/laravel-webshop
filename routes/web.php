@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use App\Models\Product;
 
 /*
@@ -17,13 +19,18 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/getproducts', [HomeController::class, 'getproducts']);
 
 Route::get('/product/{product}', [ProductController::class, 'index'])->name('product');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/product/{product}/getproduct', [ProductController::class, 'getProduct']);
+
+Route::get('profile', [UserController::class, 'index'])->middleware('auth');
+Route::post('profile', [UserController::class, 'createProfile'])->middleware('auth');
+
+Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
+
+
 
 Auth::routes();
 
@@ -33,5 +40,3 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 });
 
 Auth::routes();
-
-// Route::get('/home', [HomeController::class, 'index'])->name('home');
