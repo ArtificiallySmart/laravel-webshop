@@ -6,6 +6,7 @@
 
 require('./bootstrap');
 import axios from 'axios';
+import Vue from 'vue';
 import { products } from './products.js'
 
 
@@ -27,8 +28,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('navbar-component', require('./components/NavbarComponent').default);
 Vue.component('footer-component', require('./components/FooterComponent').default);
 Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
-Vue.component('productcard-component', require('./components/_productcardComponent').default);
-Vue.component('user-component', require('./components/UserComponent').default);
+Vue.component('productcard-component', require('./components/ProductcardComponent').default);
+Vue.component('productpage-component', require('./components/productpageComponent').default);
+Vue.component('details-component', require('./components/DetailsComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -42,7 +45,9 @@ const app = new Vue({
         products: products,
         newProducts: [],
         popularProducts: [],
-        randomProducts: []
+        randomProducts: [],
+
+
     },
     created() {
         this.getProducts(),
@@ -72,10 +77,7 @@ const app = new Vue({
 
 })
 
-// data:{
-//         products: products
-//     },
-// })
+
 
 
 // methods: {
