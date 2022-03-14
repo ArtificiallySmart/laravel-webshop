@@ -11476,6 +11476,10 @@ h5, .h5 {
   font-size: 18px;
 }
 
+.btn {
+  display: inline-block;
+}
+
 .colors span {
   display: in-line;
   border-color: black;

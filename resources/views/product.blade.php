@@ -17,4 +17,5 @@
 
      <footer-component></footer-component>
 
-     @endsection
+
+ @endsection

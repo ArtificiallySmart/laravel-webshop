@@ -28,8 +28,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('navbar-component', require('./components/NavbarComponent').default);
 Vue.component('footer-component', require('./components/FooterComponent').default);
 Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
-Vue.component('productcard-component', require('./components/_productcardComponent').default);
+Vue.component('productcard-component', require('./components/ProductcardComponent').default);
 Vue.component('productpage-component', require('./components/productpageComponent').default);
+Vue.component('details-component', require('./components/DetailsComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -44,7 +45,9 @@ const app = new Vue({
         products: products,
         newProducts: [],
         popularProducts: [],
-        randomProducts: []
+        randomProducts: [],
+        
+        
     },
     created() {
         this.getProducts(),
@@ -74,10 +77,7 @@ const app = new Vue({
 
 })
 
-// data:{
-//         products: products
-//     },
-// })
+
 
 
 methods: {
