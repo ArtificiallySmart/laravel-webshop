@@ -36,30 +36,13 @@
           </div>
         </div>
 
+        <p></p>
         <div class="text-right">
           <button type="button" class="btn btn-primary">Add To Cart</button>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-3">
-          <span class="sr-only">Four out of Five Stars</span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"
-          ></span>
-          <span class="label label-success">61</span>
-        </div>
-
-        <div class="col-md-6">
-          <div class="row"></div>
-          <p><span class="monospaced">Write a Review</span></p>
-        </div>
-      </div>
+      <productreview-component></productreview-component>
     </div>
   </div>
 </template>
@@ -67,9 +50,14 @@
 <script>
 import DetailsComponent from "./DetailsComponent.vue";
 
-import _productcardComponent from "./ProductcardComponent.vue";
+import ProductcardComponent from "./ProductcardComponent.vue";
+import ProductreviewComponent from "./ProductreviewComponent.vue";
 export default {
-  components: { _productcardComponent, DetailsComponent },
+  components: {
+    ProductcardComponent,
+    DetailsComponent,
+    ProductreviewComponent,
+  },
   mounted() {
     console.log("Productpage Component mounted.");
   },

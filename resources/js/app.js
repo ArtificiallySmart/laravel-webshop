@@ -31,6 +31,8 @@ Vue.component('searchbar-component', require('./components/SearchbarComponent').
 Vue.component('productcard-component', require('./components/ProductcardComponent').default);
 Vue.component('productpage-component', require('./components/productpageComponent').default);
 Vue.component('details-component', require('./components/DetailsComponent').default);
+Vue.component ('productreview-component', require ('./components/ProductreviewComponent').default);
+Vue.component ('starreviews-component', require('./components/StarReviewsComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
