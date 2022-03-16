@@ -25,8 +25,9 @@ Route::get('/getproducts', [HomeController::class, 'getproducts']);
 Route::get('/product/{product}', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{product}/getproduct', [ProductController::class, 'getProduct']);
 
-Route::get('profile', [UserController::class, 'index'])->middleware('auth');
-Route::post('profile', [UserController::class, 'createProfile'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'index'])->middleware('auth');
+Route::post('/profile', [UserController::class, 'createProfile'])->middleware('auth');
+Route::put('/profile', [UserController::class, 'editProfile'])->middleware('auth');
 
 Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
 

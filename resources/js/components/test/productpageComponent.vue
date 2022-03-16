@@ -5,9 +5,9 @@
       <div class="col-md-6">
         <div class="pr-img-hover-zoom">
           <img
-            src="/images/skeletonTshirt.jpg"
+            :src="`/images/${product.thumbnail}`"
             class="image-responsive"
-            alt="Skeleton"
+            :alt="product.name"
           />
         </div>
       </div>
@@ -15,17 +15,15 @@
       <div class="col-md-6">
         <div class="row">
           <div class="col-md-12">
-            <h1 span class="label label-primary">Skeleton</h1>
-            <h2 span class="p-price">€19,99</h2>
+            <h1 span class="label label-primary">{{ product.name }}</h1>
+            <h2 span class="p-price">€{{ product.price }}</h2>
 
             <!-- <p v-if="inventory > 10">In Stock</p>
             <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out</p>
             <p v-else>Out Of Stock</p> -->
 
             <p class="description">
-              Men's T-shirt. We will print the product for you after you place
-              the order. A t-shirt with an awesome design for a night out or
-              just hanging out with friends!
+              {{ product.description }}
             </p>
             <details-component></details-component>
 
@@ -65,13 +63,38 @@
 </template>
 
 <script>
-import DetailsComponent from "./DetailsComponent.vue";
+import DetailsComponent from "../DetailsComponent.vue";
 
-import ProductcardComponent from "./ProductcardComponent.vue";
+import ProductcardComponent from "../ProductcardComponent.vue";
 export default {
+  data: function () {
+    return {
+      product: "",
+    };
+  },
   components: { ProductcardComponent, DetailsComponent },
   mounted() {
     console.log("Productpage Component mounted.");
+    this.getProduct();
+  },
+  methods: {
+    getProduct() {
+      let self = this;
+      console.log("inside axios page");
+      axios({
+        method: "get",
+        url: `${window.location.href}/getproduct`,
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      })
+        .then(function (response) {
+          if (response.data.success) {
+            self.product = response.data.product;
+          }
+        })
+        .catch(function (error) {});
+    },
   },
 };
 </script>
