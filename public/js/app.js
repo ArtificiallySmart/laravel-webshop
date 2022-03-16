@@ -5962,7 +5962,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     deleteProfile: function deleteProfile() {
-      axios["delete"]("/profile");
+      axios({
+        method: "delete",
+        url: "/profile",
+        headers: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
+      }).then(function (response) {
+        window.location.replace("/");
+      })["catch"](function (error) {});
     },
     getUser: function getUser() {
       var self = this;

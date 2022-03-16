@@ -49,7 +49,7 @@ class UserController extends Controller
     {
         $user = User::find(Auth::id());
         $user->delete();
-        Auth::logout();
-        redirect()->to('/');
+        // Auth::logout();
+        // redirect()->to('/');
     }
 }

@@ -69,7 +69,17 @@ export default {
   },
   methods: {
     deleteProfile() {
-      axios.delete("/profile");
+      axios({
+        method: "delete",
+        url: "/profile",
+        headers: {
+          "X-Requested-With": "XMLHttpRequest",
+        },
+      })
+        .then(function (response) {
+          window.location.replace("/");
+        })
+        .catch(function (error) {});
     },
     getUser() {
       let self = this;
