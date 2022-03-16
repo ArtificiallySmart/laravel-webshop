@@ -47,6 +47,7 @@
       :address="address"
       :phoneNumber="phoneNumber"
     ></EditUserinfoComponent>
+    <button @click="deleteProfile">Delete profile</button>
   </div>
 </template>
 
@@ -67,6 +68,9 @@ export default {
     this.getUser();
   },
   methods: {
+    deleteProfile() {
+      axios.delete("/profile");
+    },
     getUser() {
       let self = this;
       axios({

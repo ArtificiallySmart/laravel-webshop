@@ -37,13 +37,15 @@
               name="last_name"
               v-model="user.last_name"
             /><br />
+            <!-- Apply bootstrap for custom error message after entering duplicate mail -->
             <label for="email">e-mail</label>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               v-model="user.email"
             /><br />
+            <!-- /Apply bootstrap for custom error message after entering duplicate mail -->
             <label for="street">street</label>
             <input
               type="text"
@@ -88,7 +90,7 @@
               v-model="phoneNumber.phone_number"
             />
 
-            <button data-bs-dismiss="modal">save</button>
+            <button>save</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -125,28 +127,12 @@ export default {
           phone_number: this.phoneNumber.phone_number,
         })
         .then(function (response) {
+          window.location.replace("/profile");
           //console.log(response.data);
         })
         .catch(function (error) {
-          console.log(`FATAL ERROR: ${error}`);
-        });
-      this.getUser();
-    },
-    getUser() {
-      let self = this;
-      axios({
-        method: "get",
-        url: "profile/getprofile",
-        headers: {
-          "X-Requested-With": "XMLHttpRequest",
-        },
-      })
-        .then(function (response) {
-          if (response.data.success) {
-            self.user = response.data.user;
-          }
-        })
-        .catch(function (error) {
+          let emailInput = document.getElementById("email");
+          emailInput.classList.toggle("is-invalid");
           console.log(`FATAL ERROR: ${error}`);
         });
     },

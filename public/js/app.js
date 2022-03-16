@@ -5843,6 +5843,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["user", "address", "phoneNumber"],
   data: function data() {
@@ -5865,25 +5867,11 @@ __webpack_require__.r(__webpack_exports__);
         city: this.address.city,
         country: this.address.country,
         phone_number: this.phoneNumber.phone_number
-      }).then(function (response) {//console.log(response.data);
-      })["catch"](function (error) {
-        console.log("FATAL ERROR: ".concat(error));
-      });
-      this.getUser();
-    },
-    getUser: function getUser() {
-      var self = this;
-      axios({
-        method: "get",
-        url: "profile/getprofile",
-        headers: {
-          "X-Requested-With": "XMLHttpRequest"
-        }
       }).then(function (response) {
-        if (response.data.success) {
-          self.user = response.data.user;
-        }
+        window.location.replace("/profile"); //console.log(response.data);
       })["catch"](function (error) {
+        var emailInput = document.getElementById("email");
+        emailInput.classList.toggle("is-invalid");
         console.log("FATAL ERROR: ".concat(error));
       });
     }
@@ -5957,6 +5945,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5972,6 +5961,9 @@ __webpack_require__.r(__webpack_exports__);
     this.getUser();
   },
   methods: {
+    deleteProfile: function deleteProfile() {
+      axios["delete"]("/profile");
+    },
     getUser: function getUser() {
       var self = this;
       axios({
@@ -30454,7 +30446,7 @@ var render = function () {
                     expression: "user.email",
                   },
                 ],
-                attrs: { type: "text", id: "email", name: "email" },
+                attrs: { type: "email", id: "email", name: "email" },
                 domProps: { value: _vm.user.email },
                 on: {
                   input: function ($event) {
@@ -30626,9 +30618,7 @@ var render = function () {
                 },
               }),
               _vm._v(" "),
-              _c("button", { attrs: { "data-bs-dismiss": "modal" } }, [
-                _vm._v("save"),
-              ]),
+              _c("button", [_vm._v("save")]),
             ]),
           ]),
           _vm._v(" "),
@@ -30792,6 +30782,10 @@ var render = function () {
           phoneNumber: _vm.phoneNumber,
         },
       }),
+      _vm._v(" "),
+      _c("button", { on: { click: _vm.deleteProfile } }, [
+        _vm._v("Delete profile"),
+      ]),
     ],
     1
   )

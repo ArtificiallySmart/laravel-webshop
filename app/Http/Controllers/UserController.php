@@ -40,18 +40,16 @@ class UserController extends Controller
     public function editProfile(Request $request)
     {
         $user = User::find(Auth::id());
-        // try {
         $user->update($request->toArray());
         $user->address->update($request->toArray());
         $user->phoneNumber->update($request->toArray());
-        // } catch (Throwable $e) {
-        //     echo json_encode(
-        //         [
-        //             'success' => false,
-        //             'message' => $e
-        //         ]
-        //     );
-        // }
-        // redirect()->to('/profile');
+    }
+
+    public function deleteProfile(Request $request)
+    {
+        $user = User::find(Auth::id());
+        $user->delete();
+        Auth::logout();
+        redirect()->to('/');
     }
 }

@@ -28,6 +28,7 @@ Route::get('/product/{product}/getproduct', [ProductController::class, 'getProdu
 Route::get('/profile', [UserController::class, 'index'])->middleware('auth');
 Route::post('/profile', [UserController::class, 'createProfile'])->middleware('auth');
 Route::put('/profile', [UserController::class, 'editProfile'])->middleware('auth');
+Route::delete('/profile', [UserController::class, 'deleteProfile'])->middleware('auth');
 
 Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
 
