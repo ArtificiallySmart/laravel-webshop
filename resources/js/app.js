@@ -29,11 +29,11 @@ Vue.component('navbar-component', require('./components/NavbarComponent').defaul
 Vue.component('footer-component', require('./components/FooterComponent').default);
 Vue.component('searchbar-component', require('./components/SearchbarComponent').default);
 Vue.component('productcard-component', require('./components/ProductcardComponent').default);
-//Vue.component('productpage-component', require('./components/productpageComponent').default);
-Vue.component('productpage-component', require('./components/test/productpageComponent').default);
+Vue.component('productpage-component', require('./components/productpageComponent').default);
+// Vue.component('productpage-component', require('./components/test/productpageComponent').default);
 Vue.component('details-component', require('./components/DetailsComponent').default);
-// Vue.component('user-component', require('./components/UserComponent').default);
-Vue.component('user-component', require('./components/test/UserComponent').default);
+Vue.component('user-component', require('./components/UserComponent').default);
+// Vue.component('user-component', require('./components/test/UserComponent').default);
 
 Vue.component('productreview-component', require('./components/ProductreviewComponent').default);
 Vue.component('starreviews-component', require('./components/StarReviewsComponent').default);
