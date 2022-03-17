@@ -106,15 +106,12 @@ export default {
           phone_number: this.userInfo.phoneNumber,
         })
         .then(function (response) {
+          window.location.replace("/profile");
           //console.log(response.data);
         })
         .catch(function (error) {
           console.error(error);
         });
-      this.getUser();
-    },
-    getUser() {
-      this.$parent.getUser();
     },
   },
 };

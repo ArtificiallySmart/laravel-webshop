@@ -5717,14 +5717,11 @@ __webpack_require__.r(__webpack_exports__);
         city: this.userInfo.city,
         country: this.userInfo.country,
         phone_number: this.userInfo.phoneNumber
-      }).then(function (response) {//console.log(response.data);
+      }).then(function (response) {
+        window.location.replace("/profile"); //console.log(response.data);
       })["catch"](function (error) {
         console.error(error);
       });
-      this.getUser();
-    },
-    getUser: function getUser() {
-      this.$parent.getUser();
     }
   }
 });
@@ -5742,57 +5739,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -30393,7 +30339,9 @@ var render = function () {
           _vm._v(" "),
           _c("div", { staticClass: "modal-body" }, [
             _c("form", { on: { submit: _vm.formSubmit } }, [
-              _c("label", { attrs: { for: "street" } }, [_vm._v("First name")]),
+              _c("label", { attrs: { for: "first_name" } }, [
+                _vm._v("First name"),
+              ]),
               _vm._v(" "),
               _c("input", {
                 directives: [

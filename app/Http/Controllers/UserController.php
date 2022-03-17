@@ -17,8 +17,6 @@ class UserController extends Controller
     public function getProfile()
     {
         $user = User::find(Auth::id());
-        // $user->address;
-        // $user->phoneNumber;
         echo json_encode(
             [
                 'success' => true,
@@ -34,7 +32,6 @@ class UserController extends Controller
         $user = User::find(Auth::id());
         if (!$user->address) $user->address()->create($request->toArray());
         if (!$user->phoneNumber) $user->phoneNumber()->create($request->toArray());
-        redirect()->to('/profile');
     }
 
     public function editProfile(Request $request)
@@ -48,8 +45,9 @@ class UserController extends Controller
     public function deleteProfile(Request $request)
     {
         $user = User::find(Auth::id());
+        $user->email = "deleted";
+        $user->password = "deleted";
+        $user->save();
         $user->delete();
-        // Auth::logout();
-        // redirect()->to('/');
     }
 }
