@@ -1,6 +1,9 @@
+@extends('layouts.app')
+@section('content')
+
 <template>
   <ul>
-    <li>material:100% cotton</li>
+    <li>Material:100% cotton</li>
     <li>Bio</li>
     <li>V-neck</li>
     <li>Stanley & Stella</li>
@@ -16,3 +19,6 @@ export default {
   },
 };
 </script>
+
+ @endsection('content')
+

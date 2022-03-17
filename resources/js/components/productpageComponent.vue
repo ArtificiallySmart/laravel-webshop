@@ -1,4 +1,5 @@
-
+ @extends('layouts.app')
+ @section('content')
 <template>
   <div class="container" id="product-section">
     <div class="row">
@@ -21,6 +22,12 @@
             <!-- <p v-if="inventory > 10">In Stock</p>
             <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out</p>
             <p v-else>Out Of Stock</p> -->
+            <!-- <div class="product-info">
+              <h1>{{ product }}</h1>
+              <p>In Stock</p>
+              <p>Out Of Stock</p>
+            </div> -->
+            <!-- <stock-component><stock-component> -->
 
             <p class="description">
               Men's T-shirt. We will print the product for you after you place
@@ -36,30 +43,13 @@
           </div>
         </div>
 
+        <p></p>
         <div class="text-right">
           <button type="button" class="btn btn-primary">Add To Cart</button>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-3">
-          <span class="sr-only">Four out of Five Stars</span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <span
-            class="glyphicon glyphicon-star-empty"
-            aria-hidden="true"
-          ></span>
-          <span class="label label-success">61</span>
-        </div>
-
-        <div class="col-md-6">
-          <div class="row"></div>
-          <p><span class="monospaced">Write a Review</span></p>
-        </div>
-      </div>
+      <productreview-component></productreview-component>
     </div>
   </div>
 </template>
@@ -68,8 +58,15 @@
 import DetailsComponent from "./DetailsComponent.vue";
 
 import ProductcardComponent from "./ProductcardComponent.vue";
+import ProductreviewComponent from "./ProductreviewComponent.vue";
+import StockComponent from "./StockComponent.vue";
 export default {
-  components: { ProductcardComponent, DetailsComponent },
+  components: {
+    ProductcardComponent,
+    DetailsComponent,
+    ProductreviewComponent,
+    StockComponent,
+  },
   mounted() {
     console.log("Productpage Component mounted.");
   },

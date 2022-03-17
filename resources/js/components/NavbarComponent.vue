@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"></a>
       <button
@@ -28,7 +28,7 @@
 
       <searchbar-component></searchbar-component>
 
-      <button class="login-button">Join / Login</button>
+      <a href="/login"> <button class="login-button">Join / Login</button> </a>
       <button @click="$root.showCart()" class="shoppingButton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
