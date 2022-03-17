@@ -5911,8 +5911,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -5924,8 +5922,31 @@ __webpack_require__.r(__webpack_exports__);
     ProductreviewComponent: _ProductreviewComponent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     StockComponent: _StockComponent_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
+  data: function data() {
+    return {
+      product: ""
+    };
+  },
   mounted: function mounted() {
     console.log("Productpage Component mounted.");
+    this.getProduct();
+  },
+  methods: {
+    getProduct: function getProduct() {
+      var self = this;
+      console.log("inside axios page");
+      axios({
+        method: "get",
+        url: "".concat(window.location.href, "/getproduct"),
+        headers: {
+          "X-Requested-With": "XMLHttpRequest"
+        }
+      }).then(function (response) {
+        if (response.data.success) {
+          self.product = response.data.product;
+        }
+      })["catch"](function (error) {});
+    }
   }
 });
 
@@ -30377,7 +30398,17 @@ var render = function () {
         "div",
         { staticClass: "row" },
         [
-          _vm._m(0),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "pr-img-hover-zoom" }, [
+              _c("img", {
+                staticClass: "image-responsive",
+                attrs: {
+                  src: "/images/" + _vm.product.thumbnail,
+                  alt: _vm.product.name,
+                },
+              }),
+            ]),
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-md-6" }, [
             _c("div", { staticClass: "row" }, [
@@ -30388,16 +30419,18 @@ var render = function () {
                   _c(
                     "h1",
                     { staticClass: "label label-primary", attrs: { span: "" } },
-                    [_vm._v("Skeleton")]
+                    [_vm._v(_vm._s(_vm.product.name))]
                   ),
                   _vm._v(" "),
                   _c("h2", { staticClass: "p-price", attrs: { span: "" } }, [
-                    _vm._v("€19,99"),
+                    _vm._v("€" + _vm._s(_vm.product.price)),
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "description" }, [
                     _vm._v(
-                      "\n            Men's T-shirt. We will print the product for you after you place\n            the order. A t-shirt with an awesome design for a night out or\n            just hanging out with friends!\n          "
+                      "\n            " +
+                        _vm._s(_vm.product.description) +
+                        "\n          "
                     ),
                   ]),
                   _vm._v(" "),
@@ -30405,7 +30438,7 @@ var render = function () {
                   _vm._v(" "),
                   _c("span", [_vm._v("Available colors")]),
                   _vm._v(" "),
-                  _vm._m(1),
+                  _vm._m(0),
                 ],
                 1
               ),
@@ -30413,7 +30446,7 @@ var render = function () {
             _vm._v(" "),
             _c("p"),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(1),
           ]),
           _vm._v(" "),
           _c("productreview-component"),
@@ -30424,19 +30457,6 @@ var render = function () {
   )
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-6" }, [
-      _c("div", { staticClass: "pr-img-hover-zoom" }, [
-        _c("img", {
-          staticClass: "image-responsive",
-          attrs: { src: "/images/skeletonTshirt.jpg", alt: "Skeleton" },
-        }),
-      ]),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
