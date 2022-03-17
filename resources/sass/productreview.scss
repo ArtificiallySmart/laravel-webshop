@@ -1,6 +1,5 @@
-
 .rating {
-    float:right;
+    float:left;
     border:none;
 }
 .rating:not(:checked) > input {
@@ -8,7 +7,9 @@
     top:-9999px;
     clip:rect(0, 0, 0, 0);
 }
+
 .rating:not(:checked) > label {
+    
     float:right;
     width:1em;
     padding:0 .1em;

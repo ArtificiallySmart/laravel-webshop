@@ -4,7 +4,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
+ 
  
 
 }
@@ -19,6 +19,7 @@
 
 .login-button{
   border: none;
+  background-color:#ffff
 }
 
 .header {
@@ -42,6 +43,7 @@
   margin-right: 50px;
   margin-top: auto;
   margin-bottom: auto;
+  background-color: #ffff;
 }
 
 
@@ -121,11 +123,13 @@ h5 {
 }
 
 .filter-button {
-  border: none
+  border: none;
+  background-color:#ffff
 }
 
 .unfiltered {
-  border: none
+  border: none;
+  background-color:#ffff
 }
 
 

@@ -16,6 +16,7 @@
      </body>
 
      <footer-component></footer-component>
+ </div>
 
 
  @endsection

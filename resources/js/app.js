@@ -33,7 +33,7 @@ Vue.component('productpage-component', require('./components/productpageComponen
 Vue.component('details-component', require('./components/DetailsComponent').default);
 Vue.component ('productreview-component', require ('./components/ProductreviewComponent').default);
 Vue.component ('starreviews-component', require('./components/StarReviewsComponent').default);
-
+Vue.component ('stock-component', require('./components/StockComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
