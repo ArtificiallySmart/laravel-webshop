@@ -38,16 +38,13 @@ class UserController extends Controller
     {
         $user = User::find(Auth::id());
         $user->update($request->toArray());
-        $user->address->update($request->toArray());
-        $user->phoneNumber->update($request->toArray());
+        if ($user->address) $user->address->update($request->toArray());
+        if ($user->phoneNumber) $user->phoneNumber->update($request->toArray());
     }
 
     public function deleteProfile(Request $request)
     {
         $user = User::find(Auth::id());
-        $user->email = "deleted";
-        $user->password = "deleted";
-        $user->save();
         $user->delete();
     }
 }
