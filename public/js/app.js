@@ -5493,6 +5493,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ["user", "address", "phoneNumber"],
   data: function data() {
@@ -5506,19 +5577,28 @@ __webpack_require__.r(__webpack_exports__);
 
       var self = this;
       axios.put("/profile", {
-        first_name: this.user.first_name,
-        last_name: this.user.last_name,
-        email: this.user.email,
-        street: this.address.street,
-        house_number: this.address.house_number,
-        zipcode: this.address.zipcode,
-        city: this.address.city,
-        country: this.address.country,
-        phone_number: this.phoneNumber.phone_number
+        // first_name: this.user.first_name,
+        // last_name: this.user.last_name,
+        // email: this.user.email,
+        // street: this.address.street,
+        // house_number: this.address.house_number,
+        // zipcode: this.address.zipcode,
+        // city: this.address.city,
+        // country: this.address.country,
+        // phone_number: this.phoneNumber.phone_number,
+        first_name: document.getElementById("floatingFirstname").value,
+        last_name: document.getElementById("floatingLastname").value,
+        email: document.getElementById("floatingEmail").value,
+        street: document.getElementById("floatingStreet").value,
+        house_number: document.getElementById("floatingHousenumber").value,
+        zipcode: document.getElementById("floatingZipcode").value,
+        city: document.getElementById("floatingCity").value,
+        country: document.getElementById("floatingCountry").value,
+        phone_number: document.getElementById("floatingPhonenumber").value
       }).then(function (response) {
         window.location.replace("/profile"); //console.log(response.data);
       })["catch"](function (error) {
-        var emailInput = document.getElementById("email");
+        var emailInput = document.getElementById("floatingEmail");
         emailInput.classList.toggle("is-invalid");
         console.log("FATAL ERROR: ".concat(error));
       });
@@ -30156,156 +30236,167 @@ var render = function () {
           _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "modal-body" }, [
-            _c("form", { on: { submit: _vm.formSubmit } }, [
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "first_name",
-                    id: "floatingFirstname",
-                    placeholder: "name@example.com",
-                  },
-                  domProps: { value: _vm.user.first_name },
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "floatingFirstname" } }, [
-                  _vm._v("First name"),
+            _c(
+              "form",
+              { attrs: { id: "editUserInfo" }, on: { submit: _vm.formSubmit } },
+              [
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      name: "first_name",
+                      id: "floatingFirstname",
+                      placeholder: "name@example.com",
+                      required: "",
+                    },
+                    domProps: { value: _vm.user.first_name },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingFirstname" } }, [
+                    _vm._v("First name"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    name: "last_name",
-                    id: "floatingFirstname",
-                    placeholder: "name@example.com",
-                  },
-                  domProps: { value: _vm.user.last_name },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingLastname" } }, [
-                  _vm._v("Last name"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      name: "last_name",
+                      id: "floatingLastname",
+                      placeholder: "name@example.com",
+                      required: "",
+                    },
+                    domProps: { value: _vm.user.last_name },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingLastname" } }, [
+                    _vm._v("Last name"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "email",
-                    name: "email",
-                    id: "floatingEmail",
-                    placeholder: "name@example.com",
-                  },
-                  domProps: { value: _vm.user.email },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingEmail" } }, [
-                  _vm._v("e-mail"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "email",
+                      name: "email",
+                      id: "floatingEmail",
+                      placeholder: "name@example.com",
+                      required: "",
+                    },
+                    domProps: { value: _vm.user.email },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingEmail" } }, [
+                    _vm._v("e-mail"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingStreet",
-                    placeholder: "Street",
-                  },
-                  domProps: { value: _vm.address.street },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingStreet" } }, [
-                  _vm._v("Street"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingStreet",
+                      placeholder: "Street",
+                      required: "",
+                    },
+                    domProps: { value: _vm.address.street },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingStreet" } }, [
+                    _vm._v("Street"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingHousenumber",
-                    placeholder: "House number",
-                  },
-                  domProps: { value: _vm.address.house_number },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingHousenumber" } }, [
-                  _vm._v("House number"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingHousenumber",
+                      placeholder: "House number",
+                      required: "",
+                    },
+                    domProps: { value: _vm.address.house_number },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingHousenumber" } }, [
+                    _vm._v("House number"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingZipcode",
-                    placeholder: "Zipcode",
-                  },
-                  domProps: { value: _vm.address.zipcode },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingZipcode" } }, [
-                  _vm._v("Zipcode"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingZipcode",
+                      placeholder: "Zipcode",
+                      required: "",
+                    },
+                    domProps: { value: _vm.address.zipcode },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingZipcode" } }, [
+                    _vm._v("Zipcode"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingCity",
-                    placeholder: "City",
-                  },
-                  domProps: { value: _vm.address.city },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingCity" } }, [
-                  _vm._v("City"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingCity",
+                      placeholder: "City",
+                      required: "",
+                    },
+                    domProps: { value: _vm.address.city },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingCity" } }, [
+                    _vm._v("City"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingCountry",
-                    placeholder: "Country",
-                  },
-                  domProps: { value: _vm.address.country },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingCountry" } }, [
-                  _vm._v("Country"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingCountry",
+                      placeholder: "Country",
+                      required: "",
+                    },
+                    domProps: { value: _vm.address.country },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingCountry" } }, [
+                    _vm._v("Country"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "form-floating mb-3" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "text",
-                    id: "floatingPhonenumber",
-                    placeholder: "Phone number",
-                  },
-                  domProps: { value: _vm.phoneNumber.phone_number },
-                }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "floatingPhonenumber" } }, [
-                  _vm._v("Phone number"),
+                _c("div", { staticClass: "form-floating mb-3" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "floatingPhonenumber",
+                      placeholder: "Phone number",
+                      required: "",
+                    },
+                    domProps: { value: _vm.phoneNumber.phone_number },
+                  }),
+                  _vm._v(" "),
+                  _c("label", { attrs: { for: "floatingPhonenumber" } }, [
+                    _vm._v("Phone number"),
+                  ]),
                 ]),
-              ]),
-              _vm._v(" "),
-              _c("button", [_vm._v("save")]),
-            ]),
+              ]
+            ),
           ]),
           _vm._v(" "),
           _vm._m(1),
@@ -30341,9 +30432,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-footer" }, [
-      _c("button", { attrs: { type: "button", "data-bs-dismiss": "modal" } }, [
-        _vm._v("Close"),
-      ]),
+      _c("input", {
+        staticClass: "btn btn-success",
+        attrs: { type: "submit", form: "editUserInfo" },
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-danger",
+          attrs: { type: "button", "data-bs-dismiss": "modal" },
+        },
+        [_vm._v("\n          Close\n        ")]
+      ),
     ])
   },
 ]
