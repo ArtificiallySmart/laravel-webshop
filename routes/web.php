@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShoppingCartController;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Models\Product;
 
@@ -30,9 +32,14 @@ Route::post('/profile', [UserController::class, 'createProfile'])->middleware('a
 Route::put('/profile', [UserController::class, 'editProfile'])->middleware('auth');
 Route::delete('/profile', [UserController::class, 'deleteProfile'])->middleware('auth');
 
+Route::get('/shoppingCart', [ShoppingCartController::class, 'getCart']);
+Route::post('/shoppingCart/add', [ShoppingCartController::class, 'addToCart']);
+Route::post('/shoppingCart/remove', [ShoppingCartController::class, 'deleteFromCart']);
+
+
 Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
 
-
+Route::get('test', [TestController::class, 'index']);
 
 Auth::routes();
 
