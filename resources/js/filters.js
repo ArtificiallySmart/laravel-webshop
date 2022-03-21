@@ -1,8 +1,8 @@
 document.querySelector("#placeorder").addEventListener("click", showCart)
 
 function showCart() {
-	console.log('ik heb geklikt')
-	document.querySelector("#cart").classList.toggle("hidden")
+    console.log('ik heb geklikt')
+    document.querySelector("#cart").classList.toggle("hidden")
 }
 
 let galleryProducts = document.querySelectorAll('.gallery_product');

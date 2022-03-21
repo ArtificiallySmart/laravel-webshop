@@ -31,7 +31,7 @@
     >
       <i class="bi bi-cart4">test</i>
     </div>
-    <CartComponent :items="cart" :totalprice="totalPrice"></CartComponent>
+    <!-- <CartComponent :items="cart" :totalprice="totalPrice"></CartComponent> -->
   </div>
 </template>
 

@@ -40,6 +40,7 @@ Vue.component('starreviews-component', require('./components/StarReviewsComponen
 Vue.component('stock-component', require('./components/StockComponent').default);
 
 Vue.component('test-component', require('./components/test/TestComponent').default);
+Vue.component('cart-component', require('./components/test/CartComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
