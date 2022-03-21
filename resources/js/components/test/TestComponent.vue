@@ -10,7 +10,7 @@
       </div>
     </div>
     <h2>Cart:</h2>
-    <div class="row" v-for="item in cart" :key="item.name">
+    <!-- <div class="row" v-for="item in cart" :key="item.name">
       <div class="col">
         <img :src="`/images/${item.image}`" class="img-fluid" />
       </div>
@@ -23,11 +23,20 @@
         <button class="btn btn-success" @click="addToCart(item.id)">+</button>
       </div>
       <div class="col">{{ item.price }}</div>
+    </div> -->
+    <div
+      class="shopping-cart"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight"
+    >
+      <i class="bi bi-cart4">test</i>
     </div>
+    <CartComponent :items="cart" :totalprice="totalPrice"></CartComponent>
   </div>
 </template>
 
 <script>
+import CartComponent from "./CartComponent.vue";
 export default {
   props: ["products"],
   data: function () {
@@ -102,5 +111,6 @@ export default {
       });
     },
   },
+  components: { CartComponent },
 };
 </script>
