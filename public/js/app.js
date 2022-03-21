@@ -29998,9 +29998,7 @@ var render = function () {
       _vm._v(" "),
       _c("p", { staticClass: "grey-text" }, [_vm._v("30 min ago")]),
       _vm._v(" "),
-      _c("p", [
-        _vm._v("Incredibly beautiful t-shirts. The designs are awesome"),
-      ]),
+      _c("p", [_vm._v("Incredibly looking products.The designs are awesome")]),
     ]),
   ])
 }

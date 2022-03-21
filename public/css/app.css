@@ -11574,3 +11574,17 @@ h5, .h5 {
 .rating > label:active {
   position: relative;
 }
+
+.btn-primary {
+  width: 50%;
+}
+
+.form-check-label {
+  width: 80%;
+  font-size: small;
+}
+
+.t-shirt {
+  width: 15rem;
+  transform: rotate(-10deg);
+}

@@ -4,7 +4,7 @@
       <h1>Reviews</h1>
       <p><star-reviews-component></star-reviews-component></p>
       <p class="grey-text">30 min ago</p>
-      <p>Incredibly beautiful t-shirts. The designs are awesome</p>
+      <p>Incredibly looking products.The designs are awesome</p>
     </div>
   </div>
 </template>
