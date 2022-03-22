@@ -68,7 +68,7 @@
                   <!-- /Minus button, item quantity, plus button -->
                   <!-- total price of this item -->
                   <p class="card-text">
-                    {{ formatMoney(parseInt(item.price * item.quantity)) }}
+                    {{ formatMoney(item.price * item.quantity) }}
                   </p>
                   <!-- /total price of this item -->
                 </div>

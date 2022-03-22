@@ -20,6 +20,8 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->string('thumbnail');
             $table->boolean('stock');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
 
             $table->timestamps();
             $table->softDeletes();

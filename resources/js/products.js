@@ -116,7 +116,4 @@ export let products = [
         price: '€16,99',
         category: 'Accessoires'
     },
-
-    
-
 ];

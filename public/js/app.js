@@ -2391,7 +2391,30 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     console.log("Component mounted.");
   },
-  props: ["product"]
+  props: ["product"],
+  // data: function () {
+  //   return {
+  //     products: [],
+  //   };
+  // },
+  methods: {// getProducts() {
+    //   let self = this;
+    //   console.log("inside axios");
+    //   axios({
+    //     method: "get",
+    //     url: "/getproducts",
+    //     headers: {
+    //       "X-Requested-With": "XMLHttpRequest",
+    //     },
+    //   })
+    //     .then(function (response) {
+    //       if (response.data.success) {
+    //         self.products = response.data.products;
+    //       }
+    //     })
+    //     .catch(function (error) {});
+    // },
+  }
 });
 
 /***/ }),
@@ -3509,6 +3532,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./filters */ "./resources/js/filters.js");
+
 
 
 
@@ -3549,32 +3574,55 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
   el: '#app',
   data: {
     imageRoot: '/images/',
-    products: _products_js__WEBPACK_IMPORTED_MODULE_1__.products,
-    newProducts: [],
-    popularProducts: [],
-    randomProducts: []
+    products: []
   },
   created: function created() {
-    this.getProducts(), console.log("created");
+    console.log("created");
+    this.getProducts();
+  },
+  mounted: function mounted() {// this.filter();
   },
   methods: {
     getProducts: function getProducts() {
       var self = this;
       console.log("inside axios");
       axios__WEBPACK_IMPORTED_MODULE_0___default()({
-        method: 'get',
-        url: '/getproducts',
+        method: "get",
+        url: "/getproducts",
         headers: {
           "X-Requested-With": "XMLHttpRequest"
         }
       }).then(function (response) {
         if (response.data.success) {
-          self.newProducts = response.data.newProducts;
-          self.popularProducts = response.data.popularProducts;
-          self.randomProducts = response.data.randomProducts;
+          self.products = response.data.products;
         }
       })["catch"](function (error) {});
-    }
+    } // filter() {
+    //     let galleryProducts = document.querySelectorAll('.gallery_product');
+    //     let filterButton = document.querySelectorAll('.filter-button');
+    //     let filterAll = document.querySelector('#filter-all');
+    //     filterAll.addEventListener('click', function () {
+    //         galleryProducts.forEach(photo => {
+    //             photo.style.display = 'block';
+    //         });
+    //     });
+    //     filterButton.forEach(button => {
+    //         button.addEventListener('click', function () {
+    //             // attribute from button
+    //             let categoryFromButton = this.getAttribute('category');
+    //             console.log(categoryFromButton)
+    //             galleryProducts.forEach(prod => {
+    //                 // attribute form picture
+    //                 if (prod.getAttribute('category') == categoryFromButton) {
+    //                     prod.style.display = 'block';
+    //                 } else {
+    //                     prod.style.display = 'none';
+    //                 }
+    //             });
+    //         });
+    //     });
+    // }
+
   }
 }); // methods: {
 //     let galleryProducts = document.querySelectorAll('.gallery_product');
@@ -3635,6 +3683,45 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/filters.js":
+/*!*********************************!*\
+  !*** ./resources/js/filters.js ***!
+  \*********************************/
+/***/ (() => {
+
+//document.querySelector("#placeorder").addEventListener("click", showCart)
+// function showCart() {
+//     console.log('ik heb geklikt')
+//     document.querySelector("#cart").classList.toggle("hidden")
+// }
+window.onload = function () {
+  var galleryProducts = document.querySelectorAll('.gallery_product');
+  var filterButton = document.querySelectorAll('.filter-button');
+  var filterAll = document.querySelector('#filter-all');
+  filterAll.addEventListener('click', function () {
+    galleryProducts.forEach(function (photo) {
+      photo.style.display = 'block';
+    });
+  });
+  filterButton.forEach(function (button) {
+    button.addEventListener('click', function () {
+      // attribute from button
+      var categoryFromButton = this.getAttribute('category');
+      console.log(categoryFromButton);
+      galleryProducts.forEach(function (prod) {
+        // attribute form picture
+        if (prod.getAttribute('category') == categoryFromButton) {
+          prod.style.display = 'block';
+        } else {
+          prod.style.display = 'none';
+        }
+      });
+    });
+  });
+};
 
 /***/ }),
 
@@ -22815,7 +22902,7 @@ var render = function () {
     "div",
     {
       staticClass: "col gallery_product",
-      attrs: { category: _vm.product.category },
+      attrs: { category: _vm.product.category.name },
     },
     [
       _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
@@ -24118,9 +24205,7 @@ var render = function () {
                               _vm._v(
                                 "\n                  " +
                                   _vm._s(
-                                    _vm.formatMoney(
-                                      parseInt(item.price * item.quantity)
-                                    )
+                                    _vm.formatMoney(item.price * item.quantity)
                                   ) +
                                   "\n                "
                               ),

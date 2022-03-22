@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./filters');
 import axios from 'axios';
 import Vue from 'vue';
 import { products } from './products.js'
@@ -51,38 +52,63 @@ const app = new Vue({
     el: '#app',
     data: {
         imageRoot: '/images/',
-        products: products,
-        newProducts: [],
-        popularProducts: [],
-        randomProducts: [],
-
-
+        products: []
     },
     created() {
-        this.getProducts(),
-            console.log("created")
+        console.log("created");
+        this.getProducts();
+    },
+    mounted() {
+        // this.filter();
     },
     methods: {
         getProducts() {
             let self = this;
-            console.log("inside axios")
+            console.log("inside axios");
             axios({
-                method: 'get',
-                url: '/getproducts',
+                method: "get",
+                url: "/getproducts",
                 headers: {
-                    "X-Requested-With": "XMLHttpRequest"
-                }
-            }).then(function (response) {
-                if (response.data.success) {
-                    self.newProducts = response.data.newProducts;
-                    self.popularProducts = response.data.popularProducts;
-                    self.randomProducts = response.data.randomProducts;
-                }
-            }).catch(function (error) {
+                    "X-Requested-With": "XMLHttpRequest",
+                },
+            })
+                .then(function (response) {
+                    if (response.data.success) {
+                        self.products = response.data.products;
+                    }
+                })
+                .catch(function (error) { });
+        },
+        // filter() {
+        //     let galleryProducts = document.querySelectorAll('.gallery_product');
+        //     let filterButton = document.querySelectorAll('.filter-button');
+        //     let filterAll = document.querySelector('#filter-all');
 
-            });
-        }
-    }
+        //     filterAll.addEventListener('click', function () {
+        //         galleryProducts.forEach(photo => {
+        //             photo.style.display = 'block';
+        //         });
+        //     });
+
+        //     filterButton.forEach(button => {
+        //         button.addEventListener('click', function () {
+        //             // attribute from button
+        //             let categoryFromButton = this.getAttribute('category');
+        //             console.log(categoryFromButton)
+
+        //             galleryProducts.forEach(prod => {
+        //                 // attribute form picture
+        //                 if (prod.getAttribute('category') == categoryFromButton) {
+        //                     prod.style.display = 'block';
+        //                 } else {
+        //                     prod.style.display = 'none';
+        //                 }
+        //             });
+        //         });
+        //     });
+        // }
+    },
+
 
 })
 

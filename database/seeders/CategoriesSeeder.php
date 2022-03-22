@@ -18,8 +18,8 @@ class categoriesSeeder extends Seeder
         $categories = [
             'Male',
             'Female',
-            'kids',
-            'accessoires'
+            'Kids',
+            'Accessoires'
         ];
 
         foreach ($categories as $category) {
