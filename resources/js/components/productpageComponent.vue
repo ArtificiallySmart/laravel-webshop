@@ -43,7 +43,13 @@
 
         <p></p>
         <div class="text-right">
-          <button type="button" class="btn btn-primary">Add To Cart</button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            @click="addToCart(product.id)"
+          >
+            Add To Cart
+          </button>
         </div>
       </div>
 
@@ -91,6 +97,18 @@ export default {
           }
         })
         .catch(function (error) {});
+    },
+    addToCart(id) {
+      axios
+        .post("/shoppingCart/add", {
+          id: id,
+        })
+        .then(function (response) {
+          //console.log(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
     },
   },
 };

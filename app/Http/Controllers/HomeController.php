@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -32,27 +33,12 @@ class HomeController extends Controller
         if (!$request->ajax()) {
             return redirect('/');
         }
-        $newProducts =
-            DB::table('products')
-            ->orderByDesc('created_at')
-            ->limit(4)
-            ->get();
-        $popularProducts =
-            DB::table('products')
-            ->inRandomOrder()
-            ->limit(4)
-            ->get();
-        $randomProducts =
-            DB::table('products')
-            ->inRandomOrder()
-            ->limit(4)
-            ->get();
+        $products = Product::with('category')->get();
+
 
         echo json_encode([
             "success" => true,
-            "newProducts" => $newProducts,
-            "popularProducts" => $popularProducts,
-            "randomProducts" => $randomProducts
+            "products" => $products
         ]);
     }
 }

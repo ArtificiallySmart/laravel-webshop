@@ -125,6 +125,6 @@ export let products = [
         category: 'Accessoires'
     },
 
-    
+
 
 ];

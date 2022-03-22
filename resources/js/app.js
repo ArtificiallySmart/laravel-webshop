@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./filters');
 import axios from 'axios';
 import Vue from 'vue';
 import { products } from './products.js'
@@ -39,6 +40,8 @@ Vue.component('productreview-component', require('./components/ProductreviewComp
 Vue.component('starreviews-component', require('./components/StarReviewsComponent').default);
 Vue.component('stock-component', require('./components/StockComponent').default);
 
+Vue.component('test-component', require('./components/test/TestComponent').default);
+Vue.component('cart-component', require('./components/test/CartComponent').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49,38 +52,63 @@ const app = new Vue({
     el: '#app',
     data: {
         imageRoot: '/images/',
-        products: products,
-        newProducts: [],
-        popularProducts: [],
-        randomProducts: [],
-
-
+        products: []
     },
     created() {
-        this.getProducts(),
-            console.log("created")
+        console.log("created");
+        this.getProducts();
+    },
+    mounted() {
+        // this.filter();
     },
     methods: {
         getProducts() {
             let self = this;
-            console.log("inside axios")
+            console.log("inside axios");
             axios({
-                method: 'get',
-                url: '/getproducts',
+                method: "get",
+                url: "/getproducts",
                 headers: {
-                    "X-Requested-With": "XMLHttpRequest"
-                }
-            }).then(function (response) {
-                if (response.data.success) {
-                    self.newProducts = response.data.newProducts;
-                    self.popularProducts = response.data.popularProducts;
-                    self.randomProducts = response.data.randomProducts;
-                }
-            }).catch(function (error) {
+                    "X-Requested-With": "XMLHttpRequest",
+                },
+            })
+                .then(function (response) {
+                    if (response.data.success) {
+                        self.products = response.data.products;
+                    }
+                })
+                .catch(function (error) { });
+        },
+        // filter() {
+        //     let galleryProducts = document.querySelectorAll('.gallery_product');
+        //     let filterButton = document.querySelectorAll('.filter-button');
+        //     let filterAll = document.querySelector('#filter-all');
 
-            });
-        }
-    }
+        //     filterAll.addEventListener('click', function () {
+        //         galleryProducts.forEach(photo => {
+        //             photo.style.display = 'block';
+        //         });
+        //     });
+
+        //     filterButton.forEach(button => {
+        //         button.addEventListener('click', function () {
+        //             // attribute from button
+        //             let categoryFromButton = this.getAttribute('category');
+        //             console.log(categoryFromButton)
+
+        //             galleryProducts.forEach(prod => {
+        //                 // attribute form picture
+        //                 if (prod.getAttribute('category') == categoryFromButton) {
+        //                     prod.style.display = 'block';
+        //                 } else {
+        //                     prod.style.display = 'none';
+        //                 }
+        //             });
+        //         });
+        //     });
+        // }
+    },
+
 
 })
 

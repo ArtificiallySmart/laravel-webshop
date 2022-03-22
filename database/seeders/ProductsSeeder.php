@@ -24,6 +24,7 @@ class ProductsSeeder extends Seeder
                 'price' => 19.99,
                 'thumbnail' => 'Tshirts.png',
                 'stock' => true,
+                'category' => 'Male'
             ],
             [
                 'name' => 'MartialArts',
@@ -31,6 +32,7 @@ class ProductsSeeder extends Seeder
                 'price' => 24.99,
                 'thumbnail' => 'martialarts.jpg',
                 'stock' => true,
+                'category' => 'Female'
             ],
             [
                 'name' => 'Lotus',
@@ -38,6 +40,7 @@ class ProductsSeeder extends Seeder
                 'price' => 25.55,
                 'thumbnail' => 'lotus.jpg',
                 'stock' => true,
+                'category' => 'Female'
             ],
             [
                 'name' => 'KidsSweater',
@@ -45,6 +48,7 @@ class ProductsSeeder extends Seeder
                 'price' => 30.65,
                 'thumbnail' => 'kidsLangeMouwen.jpg',
                 'stock' => true,
+                'category' => 'kids'
             ],
             [
                 'name' => 'Facemask v1',
@@ -52,6 +56,7 @@ class ProductsSeeder extends Seeder
                 'price' => 10.00,
                 'thumbnail' => 'mondkapjeSmaller.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
                 'name' => 'Facemask v2',
@@ -59,6 +64,7 @@ class ProductsSeeder extends Seeder
                 'price' => 10.00,
                 'thumbnail' => 'syntheticMondkapje.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
                 'name' => 'CoffeeMug',
@@ -66,6 +72,7 @@ class ProductsSeeder extends Seeder
                 'price' => 14.99,
                 'thumbnail' => 'kopje.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
                 'name' => 'Gymbag',
@@ -73,6 +80,7 @@ class ProductsSeeder extends Seeder
                 'price' => 18.99,
                 'thumbnail' => 'sporttas.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
                 'name' => 'Teddybeer',
@@ -80,13 +88,15 @@ class ProductsSeeder extends Seeder
                 'price' => 18.99,
                 'thumbnail' => 'knuffelbeer.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
-                'name' => 'WarriorFlower',
+                'name' => 'Warrior Flower',
                 'description' => 'This is the description of the WarriorFlower item',
                 'price' => 18.99,
                 'thumbnail' => 'warrior_flower.jpg',
                 'stock' => true,
+                "category" => 'Male'
             ],
             [
                 'name' => 'Thermos',
@@ -94,6 +104,7 @@ class ProductsSeeder extends Seeder
                 'price' => 14.99,
                 'thumbnail' => 'thermos.jpg',
                 'stock' => true,
+                "category" => 'Accessoires'
             ],
             [
                 'name' => 'Dragon',
@@ -101,11 +112,47 @@ class ProductsSeeder extends Seeder
                 'price' => 14.99,
                 'thumbnail' => 'dragons.jpg',
                 'stock' => true,
+                "category" => 'Male'
+            ],
+            [
+                'name' => 'Pillow',
+                'description' => 'This is the description of the Pillow item',
+                'price' => 12.99,
+                'thumbnail' => 'kussen.jpg',
+                'stock' => true,
+                "category" => 'Accessoires'
+            ],
+            [
+                'name' => 'Cap',
+                'description' => 'This is the description of the Cap item',
+                'price' => 16.99,
+                'thumbnail' => 'pet.jpg',
+                'stock' => true,
+                "category" => 'Accessoires'
+            ],
+            [
+                'name' => 'Mousepad',
+                'description' => 'This is the description of the Mousepad item',
+                'price' => 16.99,
+                'thumbnail' => 'muismat.jpg',
+                'stock' => true,
+                "category" => 'Accessoires'
+            ],
+            [
+                'name' => 'Messenger bag',
+                'description' => 'This is the description of the Messenger bag item',
+                'price' => 24.99,
+                'thumbnail' => 'schoudertas.jpg',
+                'stock' => true,
+                "category" => 'Accessoires'
             ],
         ];
 
         foreach ($data as $item) {
-            Product::create(
+            $category = DB::table('categories')
+                ->where('name', '=', $item['category'])
+                ->first();
+            $product = Product::create(
                 [
                     'name' => $item['name'],
                     'description' => $item['description'],
@@ -114,9 +161,11 @@ class ProductsSeeder extends Seeder
                     'stock' => $item['stock'],
                 ],
             );
+            $product->update(['category_id' => $category->id]);
         };
+
         // $specs = Spec::all();
-        $categories = Category::all();
+        // $categories = Category::all();
 
         // Product::all()->each(function ($product) use ($specs) {
         //     $product->specs()->attach(
@@ -124,10 +173,10 @@ class ProductsSeeder extends Seeder
         //     );
         // });
 
-        Product::all()->each(function ($product) use ($categories) {
-            $product->categories()->attach(
-                $categories->random(rand(1, 2))->pluck('id')->toArray()
-            );
-        });
+        // Product::all()->each(function ($product) use ($categories) {
+        //     $product->categories()->attach(
+        //         $categories->random(rand(1, 2))->pluck('id')->toArray()
+        //     );
+        // });
     }
 }

@@ -1,5 +1,5 @@
  <template>
-  <div class="col gallery_product" :category="product.category">
+  <div class="col gallery_product" :category="product.category.name">
     <div class="card" style="width: 18rem">
       <div class="img-hover-zoom">
         <a :href="'/product/' + product.id"
@@ -25,5 +25,29 @@ export default {
     console.log("Component mounted.");
   },
   props: ["product"],
+  // data: function () {
+  //   return {
+  //     products: [],
+  //   };
+  // },
+  methods: {
+    // getProducts() {
+    //   let self = this;
+    //   console.log("inside axios");
+    //   axios({
+    //     method: "get",
+    //     url: "/getproducts",
+    //     headers: {
+    //       "X-Requested-With": "XMLHttpRequest",
+    //     },
+    //   })
+    //     .then(function (response) {
+    //       if (response.data.success) {
+    //         self.products = response.data.products;
+    //       }
+    //     })
+    //     .catch(function (error) {});
+    // },
+  },
 };
 </script> 

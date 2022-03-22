@@ -14,13 +14,10 @@
     <section class="content">
 
         <div class="container">
-            <div class="row text text-center">
-                <productcard-component v-for="product in newProducts" :product="product">
+            <div class="row text text-center w-100">
+                <productcard-component v-for="product in products" :key="product.id" :product="product">
                 </productcard-component>
-                <productcard-component v-for="product in popularProducts" :product="product">
-                </productcard-component>
-                <productcard-component v-for="product in randomProducts" :product="product">
-                </productcard-component>
+
             </div>
         </div>
 
