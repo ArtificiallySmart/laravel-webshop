@@ -117,6 +117,14 @@ export let products = [
         category: 'Accessoires'
     },
 
+    {
+        id: 16,
+        name: 'Schoudertas',
+        image: imageRoot + 'schoudertas.jpg',
+        price: '€15,49',
+        category: 'Accessoires'
+    },
+
     
 
 ];

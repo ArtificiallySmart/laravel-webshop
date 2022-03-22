@@ -1,0 +1,25 @@
+.t-shirt{
+    border-radius: 60%;
+    width: 17rem;
+    transform: rotate(-10deg);
+  
+}
+
+
+.t-shirt{
+  transition: transform .3s ease-in-out;
+  
+}
+.t-shirt:hover {
+  transform: rotate(10deg);
+}
+
+.test{
+    display: flex;
+
+}
+
+
+
+   
+ 
