@@ -12,13 +12,4 @@ class TestController extends Controller
     {
         return view('test');
     }
-
-    public function private()
-    {
-        if (Gate::allows('admin-only', auth()->user())) {
-            return view('private');
-        } else {
-            abort(403);
-        }
-    }
 }

@@ -40,13 +40,6 @@ Route::post('/shoppingCart/remove', [ShoppingCartController::class, 'deleteFromC
 Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
 
 Route::get('test', [TestController::class, 'index']);
-Route::get('private', [TestController::class, 'private']);
 
-Auth::routes();
-
-// Route::middleware('auth')->prefix('admin')->group(function () {
-//     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
-//     Route::get('logout', [App\Http\Controllers\Admin\AdminController::class, 'logout'])->name('admin.logout');
-// });
 
 Auth::routes();
