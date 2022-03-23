@@ -19,8 +19,10 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->unsignedBigInteger('role')->nullable()->default(1);
-            $table->foreign('role')->references('id')->on('roles');
+
+            $table->boolean('is_admin')->default(0);
+            // $table->unsignedBigInteger('role')->nullable()->default(1);
+            // $table->foreign('role')->references('id')->on('roles');
 
             $table->rememberToken();
             $table->timestamps();

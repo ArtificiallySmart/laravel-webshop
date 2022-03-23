@@ -24,7 +24,7 @@ class UsersSeeder extends Seeder
             'last_name'     => 'Baggins',
             'email'         => 'BilBag@shire.me',
             'password'      => bcrypt('Onering'),
-            'role'          => 3,
+            'is_admin'          => 1,
             'created_at'    => now(),
         ]);
 

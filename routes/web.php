@@ -27,7 +27,7 @@ Route::get('/getproducts', [HomeController::class, 'getproducts']);
 Route::get('/product/{product}', [ProductController::class, 'index'])->name('product');
 Route::get('/product/{product}/getproduct', [ProductController::class, 'getProduct']);
 
-Route::get('/profile', [UserController::class, 'index'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'index'])->name('profile')->middleware('auth');
 Route::post('/profile', [UserController::class, 'createProfile'])->middleware('auth');
 Route::put('/profile', [UserController::class, 'editProfile'])->middleware('auth');
 Route::delete('/profile', [UserController::class, 'deleteProfile'])->middleware('auth');
@@ -40,12 +40,13 @@ Route::post('/shoppingCart/remove', [ShoppingCartController::class, 'deleteFromC
 Route::get('profile/getprofile', [UserController::class, 'getProfile'])->middleware('auth');
 
 Route::get('test', [TestController::class, 'index']);
+Route::get('private', [TestController::class, 'private']);
 
 Auth::routes();
 
-Route::middleware('auth')->prefix('admin')->group(function () {
-    Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
-    Route::get('logout', [App\Http\Controllers\Admin\AdminController::class, 'logout'])->name('admin.logout');
-});
+// Route::middleware('auth')->prefix('admin')->group(function () {
+//     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('admin');
+//     Route::get('logout', [App\Http\Controllers\Admin\AdminController::class, 'logout'])->name('admin.logout');
+// });
 
 Auth::routes();
