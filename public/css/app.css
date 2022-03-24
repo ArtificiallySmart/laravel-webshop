@@ -11362,11 +11362,6 @@ textarea.form-control-lg {
   cursor: pointer;
 }
 
-.container {
-  display: flex;
-  overflow: hidden;
-}
-
 .layer {
   position: fixed;
   top: 0;

@@ -23,7 +23,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the skeleton shirt',
                 'price' => 19.99,
                 'thumbnail' => 'Tshirts.png',
-                'stock' => true,
+                'stock' => 50,
                 'category' => 'Male'
             ],
             [
@@ -31,7 +31,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the MartialArts item',
                 'price' => 24.99,
                 'thumbnail' => 'martialarts.jpg',
-                'stock' => true,
+                'stock' => 50,
                 'category' => 'Female'
             ],
             [
@@ -39,7 +39,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Lotus item',
                 'price' => 25.55,
                 'thumbnail' => 'lotus.jpg',
-                'stock' => true,
+                'stock' => 50,
                 'category' => 'Female'
             ],
             [
@@ -47,7 +47,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the KidsSweater item',
                 'price' => 30.65,
                 'thumbnail' => 'kidsLangeMouwen.jpg',
-                'stock' => true,
+                'stock' => 50,
                 'category' => 'kids'
             ],
             [
@@ -55,7 +55,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Facemask v1 item',
                 'price' => 10.00,
                 'thumbnail' => 'mondkapjeSmaller.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -63,7 +63,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Facemask v2 item',
                 'price' => 10.00,
                 'thumbnail' => 'syntheticMondkapje.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -71,7 +71,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the CoffeeMug item',
                 'price' => 14.99,
                 'thumbnail' => 'kopje.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -79,7 +79,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Gymbag item',
                 'price' => 18.99,
                 'thumbnail' => 'sporttas.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -87,7 +87,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Teddybeer item',
                 'price' => 18.99,
                 'thumbnail' => 'knuffelbeer.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -95,7 +95,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the WarriorFlower item',
                 'price' => 18.99,
                 'thumbnail' => 'warrior_flower.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Male'
             ],
             [
@@ -103,7 +103,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Thermos item',
                 'price' => 14.99,
                 'thumbnail' => 'thermos.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -111,7 +111,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Dragon item',
                 'price' => 14.99,
                 'thumbnail' => 'dragons.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Male'
             ],
             [
@@ -119,7 +119,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Pillow item',
                 'price' => 12.99,
                 'thumbnail' => 'kussen.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -127,7 +127,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Cap item',
                 'price' => 16.99,
                 'thumbnail' => 'pet.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -135,7 +135,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Mousepad item',
                 'price' => 16.99,
                 'thumbnail' => 'muismat.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
             [
@@ -143,7 +143,7 @@ class ProductsSeeder extends Seeder
                 'description' => 'This is the description of the Messenger bag item',
                 'price' => 24.99,
                 'thumbnail' => 'schoudertas.jpg',
-                'stock' => true,
+                'stock' => 50,
                 "category" => 'Accessoires'
             ],
         ];

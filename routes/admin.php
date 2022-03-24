@@ -18,4 +18,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', [AdminController::class, 'index'])->name('home');
+Route::get('/', [AdminController::class, 'index'])->name('dashboard');

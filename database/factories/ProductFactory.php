@@ -18,7 +18,7 @@ class ProductFactory extends Factory
             'description' => $this->faker->paragraph(),
             'price' => $this->faker->randomFloat(2, 5, 30),
             'thumbnail' => $this->faker->imageUrl(),
-            'stock' => true
+            'stock' => rand(10, 25)
         ];
     }
 }

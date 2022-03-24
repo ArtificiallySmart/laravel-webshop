@@ -36,7 +36,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('deleted_by')->references('id')->on('users');
         });
 
-        Schema::create('order_product', function (Blueprint $table) {
+        Schema::create('order_products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')->references('id')->on('orders');
@@ -64,7 +64,7 @@ class CreateOrdersTable extends Migration
     public function down()
     {
         // Schema::dropIfExists('order_product_has_specs');
-        Schema::dropIfExists('order_product');
+        Schema::dropIfExists('order_products');
         Schema::dropIfExists('orders');
         Schema::dropIfExists('payment_methods');
     }
