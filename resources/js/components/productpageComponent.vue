@@ -3,7 +3,7 @@
 <template>
   <div class="container" id="product-section">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 animation">
         <div class="pr-img-hover-zoom">
           <img
             :src="`/images/${product.thumbnail}`"
