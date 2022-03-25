@@ -11382,14 +11382,12 @@ h4, .h4 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
 h5, .h5 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
 .filter-button {
@@ -11573,10 +11571,6 @@ h5, .h5 {
   position: relative;
 }
 
-.btn-primary {
-  width: 20%;
-}
-
 .form-check-label {
   width: 60%;
   font-size: small;
@@ -11637,7 +11631,7 @@ h5, .h5 {
 }
 
 .t-shirt {
-  border-radius: 60%;
+  border-radius: 70%;
   width: 17rem;
   transform: rotate(-10deg);
 }
@@ -11652,4 +11646,8 @@ h5, .h5 {
 
 .test {
   display: flex;
+}
+
+.btn btn-primary {
+  width: 60%;
 }

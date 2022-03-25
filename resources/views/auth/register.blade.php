@@ -108,13 +108,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
+                                    <div class="row mb-6">
 
-                                        <div class="col-md-6 offset-md-5">
+                                        <div class="col-md-9 offset-md-9">
 
 
 
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="btn btn-primary register">
                                                 {{ __('Register') }}
                                             </button>
                                         </div>
