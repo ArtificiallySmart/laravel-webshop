@@ -11576,16 +11576,19 @@ h5, .h5 {
   font-size: small;
 }
 
+.parent {
+  position: absolute;
+  width: 12rem;
+}
+
+.parent:hover {
+  transition: transform 0.3s ease-in-out;
+  z-index: 3;
+}
+
 .images {
   position: absolute;
   width: 15rem;
-}
-
-.image1 {
-  position: absolute;
-  width: 12rem;
-  transform: rotate(0deg);
-  z-index: 3;
 }
 
 .image2 {

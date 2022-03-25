@@ -2441,6 +2441,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -22967,9 +22984,58 @@ var render = function () {
       _vm._v(" "),
       _c("p", [_vm._v("Incredibly looking products.The designs are awesome")]),
     ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        {
+          staticClass: "form-label",
+          attrs: { for: "exampleFormControlInput1" },
+        },
+        [_vm._v("User")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "user",
+          id: "exampleFormControlInput1",
+          placeholder: "name@example.com",
+        },
+      }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-3" }, [
+      _c(
+        "label",
+        {
+          staticClass: "form-label",
+          attrs: { for: "exampleFormControlTextarea1" },
+        },
+        [_vm._v("Review")]
+      ),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass: "form-control",
+        attrs: { id: "exampleFormControlTextarea1", rows: "5" },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
