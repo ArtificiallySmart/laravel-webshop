@@ -2608,6 +2608,136 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -23442,95 +23572,203 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("ul", { staticClass: "list-group mb-3" }, [
-        _c("li", { staticClass: "list-group-item" }, [
-          _vm._v(
-            "\n            " +
-              _vm._s(_vm.user.first_name) +
-              " " +
-              _vm._s(_vm.user.last_name) +
-              "\n        "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("li", { staticClass: "list-group-item" }, [
-          _vm._v(_vm._s(_vm.user.email)),
-        ]),
-        _vm._v(" "),
-        _vm.user.address
-          ? _c("div", [
-              _c("li", { staticClass: "list-group-item" }, [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.address.street) +
-                    " " +
-                    _vm._s(_vm.address.house_number) +
-                    "\n            "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "list-group-item" }, [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm.address.zipcode) +
-                    " " +
-                    _vm._s(_vm.address.city) +
-                    "\n            "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "list-group-item" }, [
-                _vm._v(_vm._s(_vm.address.country)),
-              ]),
-            ])
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.phoneNumber.phone_number
-          ? _c("div", [
-              _c("li", { staticClass: "list-group-item" }, [
-                _vm._v(_vm._s(_vm.phoneNumber.phone_number)),
-              ]),
-            ])
-          : _vm._e(),
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-secondary",
-          attrs: {
-            "data-bs-toggle": "modal",
-            "data-bs-target": "#edit-staticBackdrop",
-          },
-        },
-        [_vm._v("\n        Edit\n    ")]
-      ),
-      _vm._v(" "),
-      !_vm.user.address || !_vm.user.phone_number
-        ? _c(
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col" }, [
+          _c("ul", { staticClass: "list-group mb-3" }, [
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.user.first_name) +
+                  " " +
+                  _vm._s(_vm.user.last_name) +
+                  "\n        "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.user.email)),
+            ]),
+            _vm._v(" "),
+            _vm.user.address
+              ? _c("div", [
+                  _c("li", { staticClass: "list-group-item" }, [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(_vm.address.street) +
+                        " " +
+                        _vm._s(_vm.address.house_number) +
+                        "\n          "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "list-group-item" }, [
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(_vm.address.zipcode) +
+                        " " +
+                        _vm._s(_vm.address.city) +
+                        "\n          "
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "list-group-item" }, [
+                    _vm._v(_vm._s(_vm.address.country)),
+                  ]),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.phoneNumber.phone_number
+              ? _c("div", [
+                  _c("li", { staticClass: "list-group-item" }, [
+                    _vm._v(_vm._s(_vm.phoneNumber.phone_number)),
+                  ]),
+                ])
+              : _vm._e(),
+          ]),
+          _vm._v(" "),
+          _c(
             "button",
             {
               staticClass: "btn btn-secondary",
               attrs: {
                 "data-bs-toggle": "modal",
-                "data-bs-target": "#add-staticBackdrop",
+                "data-bs-target": "#edit-staticBackdrop",
               },
             },
-            [_vm._v("\n        Add information\n    ")]
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-danger",
-          attrs: {
-            "data-bs-toggle": "modal",
-            "data-bs-target": "#delete-staticBackdrop",
-          },
-        },
-        [_vm._v("Delete\n        profile")]
-      ),
+            [_vm._v("\n        Edit\n      ")]
+          ),
+          _vm._v(" "),
+          !_vm.user.address || !_vm.user.phone_number
+            ? _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary",
+                  attrs: {
+                    "data-bs-toggle": "modal",
+                    "data-bs-target": "#add-staticBackdrop",
+                  },
+                },
+                [_vm._v("\n        Add information\n      ")]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger",
+              attrs: {
+                "data-bs-toggle": "modal",
+                "data-bs-target": "#delete-staticBackdrop",
+              },
+            },
+            [_vm._v("\n        Delete profile\n      ")]
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col" }, [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              attrs: {
+                type: "button",
+                "data-bs-toggle": "collapse",
+                "data-bs-target": "#collapseExample",
+                "aria-expanded": "false",
+                "aria-controls": "collapseExample",
+              },
+            },
+            [_vm._v("\n        Order History\n      ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "collapse", attrs: { id: "collapseExample" } },
+            [
+              _c("div", { staticClass: "card card-body" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "accordion accordion-flush",
+                    attrs: { id: "accordionFlushExample" },
+                  },
+                  _vm._l(_vm.user.orders, function (order) {
+                    return _c(
+                      "div",
+                      { key: order.id, staticClass: "accordion-item" },
+                      [
+                        _c(
+                          "h2",
+                          {
+                            staticClass: "accordion-header",
+                            attrs: { id: "flush-headingOne" },
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "accordion-button collapsed",
+                                attrs: {
+                                  type: "button",
+                                  "data-bs-toggle": "collapse",
+                                  "data-bs-target":
+                                    "#flush-collapse" + order.id,
+                                  "aria-expanded": "false",
+                                  "aria-controls": "flush-collapseOne",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                  Order id: " +
+                                    _vm._s(order.id) +
+                                    "\n                "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "accordion-collapse collapse",
+                            attrs: {
+                              id: "flush-collapse" + order.id,
+                              "aria-labelledby": "flush-headingOne",
+                              "data-bs-parent": "#accordionFlushExample",
+                            },
+                          },
+                          [
+                            _c("div", { staticClass: "accordion-body" }, [
+                              _c(
+                                "ul",
+                                _vm._l(
+                                  order.order_products,
+                                  function (product) {
+                                    return _c("li", { key: product.id }, [
+                                      _vm._v(
+                                        "\n                      " +
+                                          _vm._s(product.product.name) +
+                                          "\n                    "
+                                      ),
+                                    ])
+                                  }
+                                ),
+                                0
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]
+                    )
+                  }),
+                  0
+                ),
+              ]),
+            ]
+          ),
+        ]),
+      ]),
       _vm._v(" "),
       _c("AddUserinfoComponent", {
         attrs: {

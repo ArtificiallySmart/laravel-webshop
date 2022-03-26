@@ -16,7 +16,9 @@ class UserController extends Controller
 
     public function getProfile()
     {
-        $user = User::find(Auth::id());
+        $id = Auth::id();
+        // $user = User::find($id);
+        $user = User::with('address', 'phoneNumber', 'orders.orderProducts.product')->find($id);
         echo json_encode(
             [
                 'success' => true,
