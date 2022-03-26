@@ -18,6 +18,7 @@ class CheckoutController extends Controller
 
     public function getInfo()
     {
+
         $user = Auth::user();
         $cart = session()->get('cart', []);
 

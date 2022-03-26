@@ -11378,20 +11378,6 @@ textarea.form-control-lg {
   display: block;
 }
 
-h4, .h4 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-h5, .h5 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .filter-button {
   border: none;
   background-color: #ffff;
