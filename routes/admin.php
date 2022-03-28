@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
