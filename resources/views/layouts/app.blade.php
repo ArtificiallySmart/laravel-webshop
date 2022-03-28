@@ -29,8 +29,9 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <div id="myBtnContainer">
-                                <button class="unfiltered" id="filter-all">All Products</button>
-
+                                <a href="/">
+                                    <button class="unfiltered" id="filter-all">All Products</button>
+                                </a>
                                 <button class="filter-button" category="Male">Male</button>
                                 <button class="filter-button" category="Female">Female</button>
                                 <button class="filter-button" category="Kids">Kids</button>
