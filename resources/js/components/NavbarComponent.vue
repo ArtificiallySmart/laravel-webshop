@@ -15,8 +15,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <a href="/"
+            ><button class="unfiltered" id="filter-all">All Products</button></a
+          >
           <div id="myBtnContainer">
-            <button class="unfiltered" id="filter-all">All Products</button>
+            <!-- <button class="unfiltered" id="filter-all">All Products</button> -->
 
             <button class="filter-button" category="Male">Male</button>
             <button class="filter-button" category="Female">Female</button>

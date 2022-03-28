@@ -68,10 +68,6 @@
     cursor: pointer;
 }
 
-.container {
-    display: flex;
-    overflow: hidden;
-}
 
 .layer {
     position: fixed;
@@ -93,14 +89,14 @@ h4 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+   
 }
 
 h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    
 }
 
 .filter-button {
