@@ -4,12 +4,12 @@
 
 <div id="app">
 
-    <div class="header">
+    <!-- <div class="header">
 
         <navbar-component></navbar-component>
         <img src="/images/logo.png" alt="logo">
 
-    </div>
+    </div> -->
 
     <div class="container">
         <div class="row justify-content-center">
