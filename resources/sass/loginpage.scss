@@ -5,17 +5,19 @@
     font-size: small;
 }
 
- .parent{
-   position: absolute;
-     width: 12rem;
+.parent{
+  position: absolute;
+  width: 12rem;
+  z-index: 3;
+ 
 
  }
  
- .parent:hover{
-    transition: transform .3s ease-in-out;
+.parent:hover > .children {
     
-  
-    z-index: 3;
+    transition: transform .5s ease-in-out;
+    
+   
 
  }
 //  .image1.{
@@ -25,9 +27,9 @@
 //      z-index: 3;
 //  }
   
-.images{
+.children{
    position: absolute;
-   width:  15rem;
+   width: 15rem;
  }
    
 
@@ -35,7 +37,7 @@
      position:absolute;
       width: 12rem;
      z-index: 2;
-      transform: rotate(5deg);
+      transform: rotate(-5deg);
     
  }
 
@@ -47,13 +49,13 @@
      
  }
 
- .image1{
-  transition: transform .3s ease-in-out;
+//  .image1{
+//   transition: transform .3s ease-in-out;
   
-}
-.image1:hover {
-  transform: rotate(-30deg);
-}
+// }
+// .image1:hover {
+//   transform: rotate(-30deg);
+// }
 
 
 .image2{

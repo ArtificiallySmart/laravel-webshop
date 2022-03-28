@@ -31,16 +31,16 @@
                             <div class="row">
                                 <div class="col-md-6">
 
-                                <div class ="images">
-                                    <div class="parent">
-                                        <img class="image1" src="./images/skeletonTshirtforLogin.png">
-                                    </div>
-                                    <div class="children">
-                                        <img class="image2" src="./images/martialartsLogin.png">
-                                        <img class="image3" src="./images/warriorflowerforLogin.png">
 
+                                    <div class="parent">
+                                        <img class="parent" src="./images/skeletonTshirtforLogin.png">
+
+                                        <div class="children">
+                                            <img class="image2" src="./images/martialartsLogin.png">
+                                            <img class="image3" src="./images/warriorflowerforLogin.png">
+
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
 
                             </div>
@@ -115,7 +115,8 @@
         </div>
     </div>
 </div>
-</div>
+
+
 
 
 <footer-component></footer-component>

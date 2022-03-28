@@ -2340,6 +2340,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -22853,13 +22856,15 @@ var staticRenderFns = [
       "div",
       { staticClass: "collapse navbar-collapse", attrs: { id: "navbarNav" } },
       [
-        _c("div", { attrs: { id: "myBtnContainer" } }, [
+        _c("a", { attrs: { href: "/" } }, [
           _c(
             "button",
             { staticClass: "unfiltered", attrs: { id: "filter-all" } },
             [_vm._v("All Products")]
           ),
-          _vm._v(" "),
+        ]),
+        _vm._v(" "),
+        _c("div", { attrs: { id: "myBtnContainer" } }, [
           _c(
             "button",
             { staticClass: "filter-button", attrs: { category: "Male" } },

@@ -11579,14 +11579,14 @@ h5, .h5 {
 .parent {
   position: absolute;
   width: 12rem;
-}
-
-.parent:hover {
-  transition: transform 0.3s ease-in-out;
   z-index: 3;
 }
 
-.images {
+.parent:hover > .children {
+  transition: transform 0.5s ease-in-out;
+}
+
+.children {
   position: absolute;
   width: 15rem;
 }
@@ -11595,7 +11595,7 @@ h5, .h5 {
   position: absolute;
   width: 12rem;
   z-index: 2;
-  transform: rotate(5deg);
+  transform: rotate(-5deg);
 }
 
 .image3 {
@@ -11603,14 +11603,6 @@ h5, .h5 {
   position: absolute;
   transform: rotate(-10deg);
   z-index: 1;
-}
-
-.image1 {
-  transition: transform 0.3s ease-in-out;
-}
-
-.image1:hover {
-  transform: rotate(-30deg);
 }
 
 .image2 {
