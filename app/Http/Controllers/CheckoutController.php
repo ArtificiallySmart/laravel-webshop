@@ -21,7 +21,10 @@ class CheckoutController extends Controller
 
         $user = Auth::user();
         $cart = session()->get('cart', []);
-
+        $totalPrice = 0;
+        foreach ($cart as $key => $value) {
+            # code...
+        }
         // echo json_encode([
         //     "success" => true,
         //     "user" => $user,
@@ -38,8 +41,12 @@ class CheckoutController extends Controller
     {
         $cart = session()->get('cart', []);
         $id = Auth::id();
+        $totalPrice = 0;
 
-        $order = new Order(['user_id' => $id, 'created_by' => $id]);
+        foreach ($cart as $cartItem) {
+            $totalPrice += $cartItem['quantity'] * $cartItem['price'];
+        }
+        $order = new Order(['user_id' => $id, 'created_by' => $id, 'total_price' => $totalPrice]);
         $order->save();
 
         foreach ($cart as $orderItem) {

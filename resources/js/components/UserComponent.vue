@@ -52,7 +52,7 @@
       <!-- End If user information is missing, show this button -->
       <div class="col">
         <button
-          class="btn btn-primary"
+          class="btn btn-primary w-100"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseExample"
@@ -78,7 +78,16 @@
                     aria-expanded="false"
                     aria-controls="flush-collapseOne"
                   >
-                    Order id: {{ order.id }}
+                    <div class="row w-100">
+                      <div class="col">Order id: {{ order.id }}</div>
+                      <div class="col">
+                        {{ formatDate(order.created_at) }}
+                      </div>
+                      <div class="col">
+                        Total price: {{ order.total_price }}
+                      </div>
+                      <div class="col">{{ order.status }}</div>
+                    </div>
                   </button>
                 </h2>
                 <div
@@ -88,14 +97,49 @@
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div class="accordion-body">
-                    <ul>
-                      <li
-                        v-for="product in order.order_products"
-                        :key="product.id"
-                      >
-                        {{ product.product.name }}
-                      </li>
-                    </ul>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Product</th>
+                          <th scope="col">Amount</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Total price</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          v-for="product in order.order_products"
+                          :key="product.id"
+                        >
+                          <td>{{ product.product.name }}</td>
+                          <td>{{ product.amount }}</td>
+                          <td>{{ product.product.price }}</td>
+                          <td>{{ product.product.price * product.amount }}</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td colspan="2">Shipping method</td>
+                          <td>Standard</td>
+                          <td><i>Free</i></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">Total</td>
+                          <td></td>
+                          <td><i>Total price</i></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">VAT</td>
+                          <td>21%</td>
+                          <td><i>VAT amount</i></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2">Grand Total</td>
+                          <td></td>
+                          <td><i>Grand total price</i></td>
+                        </tr>
+                      </tfoot>
+                    </table>
                   </div>
                 </div>
               </div>
@@ -224,6 +268,10 @@ export default {
           }
         })
         .catch(function (error) {});
+    },
+    formatDate(date) {
+      let newDate = new Date(date);
+      return newDate.toDateString();
     },
   },
   components: {

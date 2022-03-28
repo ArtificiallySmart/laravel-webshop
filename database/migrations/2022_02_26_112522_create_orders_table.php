@@ -24,7 +24,8 @@ class CreateOrdersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('payment_method_id')->nullable();
             $table->foreign('payment_method_id')->references('id')->on('payment_methods');
-
+            $table->float('total_price');
+            $table->enum('status', ['pending', 'accepted', 'complete'])->default('pending');
             $table->timestamps();
             $table->softDeletes();
 

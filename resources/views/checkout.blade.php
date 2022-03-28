@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-
+<!-- 
 <div class="header">
-    <!-- <shopping-cart ref="cartComponent"></shopping-cart> -->
+  
     <navbar-component></navbar-component>
     <img src="/images/logo.png" alt="logo">
 
-</div>
+</div> -->
 
 <div class="container">
     <div class="row">
