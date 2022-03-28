@@ -24,7 +24,8 @@ class CreateOrdersTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('payment_method_id')->nullable();
             $table->foreign('payment_method_id')->references('id')->on('payment_methods');
-
+            $table->float('total_price');
+            $table->enum('status', ['pending', 'accepted', 'complete'])->default('pending');
             $table->timestamps();
             $table->softDeletes();
 
@@ -36,7 +37,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('deleted_by')->references('id')->on('users');
         });
 
-        Schema::create('order_product', function (Blueprint $table) {
+        Schema::create('order_products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('order_id');
             $table->foreign('order_id')->references('id')->on('orders');
@@ -64,7 +65,7 @@ class CreateOrdersTable extends Migration
     public function down()
     {
         // Schema::dropIfExists('order_product_has_specs');
-        Schema::dropIfExists('order_product');
+        Schema::dropIfExists('order_products');
         Schema::dropIfExists('orders');
         Schema::dropIfExists('payment_methods');
     }

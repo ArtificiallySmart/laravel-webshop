@@ -60,7 +60,7 @@
         </div> -->
       </div>
     </nav>
-    <CartComponent ref="shoppingCart"></CartComponent> -->
+    <CartComponent ref="shoppingCart"></CartComponent>-->
   </div>
 </template>
 

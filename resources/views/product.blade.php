@@ -3,12 +3,12 @@
  <div id="app">
 
      <body>
-         <div class="header">
+         <!-- <div class="header">
 
 
              <navbar-component></navbar-component>
              <img src="/images/logo.png" alt="logo">
-         </div>
+         </div> -->
 
          <productpage-component></productpage-component>
 

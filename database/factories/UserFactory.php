@@ -19,7 +19,7 @@ class UserFactory extends Factory
             'last_name' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => bcrypt('Gorilla1!'), // password
-            'role' => 1,
+            // 'role' => 1,
             'created_at' => now(),
             'created_by' => 1
         ];

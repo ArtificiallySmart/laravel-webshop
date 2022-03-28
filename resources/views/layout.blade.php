@@ -3,12 +3,13 @@
 
 <body>
 
-    <navbar-component></navbar-component>
 
-    <div class="header">
-        <!-- <shopping-cart ref="cartComponent"></shopping-cart> -->
+
+    <!-- <div class="header">
+        <navbar-component></navbar-component>
         <img src="/images/logo.png" alt="logo">
-    </div>
+
+    </div> -->
     <!--------------------------------------------------ROW OF PRODUCTS & PRICES ------------------------------------------------------------------------>
 
     <section class="content">

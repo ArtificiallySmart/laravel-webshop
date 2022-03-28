@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->text('description');
             $table->float('price');
             $table->string('thumbnail');
-            $table->boolean('stock');
+            $table->unsignedBigInteger('stock');
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
 

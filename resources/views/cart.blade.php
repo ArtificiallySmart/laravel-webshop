@@ -4,7 +4,7 @@
 
 
 <div class="cart">
-    <!--<!-- Title -->
+    <!-- Title -->
     <div class="Cart">
         <p>Cart</p>
     </div>

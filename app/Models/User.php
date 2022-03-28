@@ -45,6 +45,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
     public function address()
     {
         return $this->hasOne(Address::class);
@@ -53,5 +55,10 @@ class User extends Authenticatable
     public function phoneNumber()
     {
         return $this->hasOne(PhoneNumber::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
     }
 }
