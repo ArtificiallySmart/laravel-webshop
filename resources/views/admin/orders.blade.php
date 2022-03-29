@@ -28,7 +28,7 @@
                     <td>{{ $newOrder->total_price }}</td>
                     <td>{{ $newOrder->user->first_name}} {{ $newOrder->user->last_name }} </td>
                     <td>{{ $newOrder->status }}</td>
-                    <td><a href="#">Details</a>
+                    <td><a href="/admin/orders/{{$newOrder->id}}">Details</a></td>
                 </tr>
                 @endforeach
             </tbody>
@@ -37,6 +37,35 @@
     @else
     <h2>No new orders</h2>
     @endif
+    <h2>All orders</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Order id</th>
+                    <th scope="col">Order date</th>
+                    <th scope="col">Total price</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($allOrders as $allOrder)
+                <tr>
+                    <td>{{ $allOrder->id }}</td>
+                    <td>{{ $allOrder->created_at }}</td>
+                    <td>{{ $allOrder->total_price }}</td>
+                    <td>{{ $allOrder->user->first_name}} {{ $allOrder->user->last_name }} </td>
+                    <td>{{ $allOrder->status }}</td>
+                    <td><a href="#">Details</a></td>
+                </tr>
+                @endforeach
+            </tbody>
+
+        </table>
+        {{ $allOrders->links() }}
+    </div>
 </main>
 
 @endsection

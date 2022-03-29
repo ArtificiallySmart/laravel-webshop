@@ -45,14 +45,14 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('orders') }}">
+                                    <a class="nav-link" href="{{ route('admin-orders') }}">
                                         <span data-feather="file"></span>
                                         Orders
                                         <span class="badge rounded-pill bg-success">{{ $newOrdersCount ?? '' }}</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
+                                    <a class="nav-link" href="{{ route('admin-products')}}">
                                         <span data-feather="shopping-cart"></span>
                                         Products
                                     </a>
