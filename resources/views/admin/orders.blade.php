@@ -7,7 +7,7 @@
         <h1 class="h2">Orders</h1>
     </div>
     @if($newOrders)
-    <h2>New orders</h2>
+    <h2> New orders</h2>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>

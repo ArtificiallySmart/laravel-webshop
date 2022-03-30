@@ -7,11 +7,44 @@
         <h1 class="h2">Orders</h1>
     </div>
 
+    @if($lowStockProducts)
+    <h2>Low Stock</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($lowStockProducts as $product)
+                <tr>
+                    <td>{{ $product->id }}</td>
+                    <td><a href="/admin/products/{{ $product->id }}">{{ $product->name }}</a></td>
+                    <td> €{{ $product->price }} </td>
+                    <td>{{ $product->description }}</td>
+                    <td>{{ $product->thumbnail}}</td>
+                    <td>{{ $product->category->name }}</td>
+                    <td>{{ $product->stock}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    @endif
+
     <h2>All products</h2>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
                     <th scope="col">Description</th>
@@ -24,7 +57,8 @@
                 @foreach($allProducts as $product)
                 <tr>
                     <td>{{ $product->id }}</td>
-                    <td>{{ $product->name }}</td>
+                    <td><a href="/admin/products/{{ $product->id }}">{{ $product->name }}</a></td>
+                    <td> €{{ $product->price }} </td>
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->thumbnail}}</td>
                     <td>{{ $product->category->name }}</td>

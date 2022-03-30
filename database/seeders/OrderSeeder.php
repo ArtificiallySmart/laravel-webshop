@@ -33,7 +33,8 @@ class OrderSeeder extends Seeder
             $order = new Order([
                 'user_id' => rand(2, 11),
                 'total_price' => $totalPrice,
-                'status' => $orderStatus[rand(0, 2)]
+                'status' => $orderStatus[rand(0, 2)],
+                'created_at' => \Carbon\Carbon::now()->subDays(rand(1, 30))
             ]);
             $order->save();
             // DB::table('orders')->insert([
