@@ -3375,6 +3375,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -24805,6 +24812,8 @@ var render = function () {
             _c("p"),
             _vm._v(" "),
             _c("div", { staticClass: "text-right" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "button",
                 {
@@ -24841,6 +24850,38 @@ var staticRenderFns = [
       _c("span"),
       _vm._v(" "),
       _c("span"),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("span", [_vm._v("Sizes")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-light", attrs: { type: "button" } },
+        [_vm._v("S")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-light", attrs: { type: "button" } },
+        [_vm._v("M")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-light", attrs: { type: "button" } },
+        [_vm._v("L")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-light", attrs: { type: "button" } },
+        [_vm._v("XL")]
+      ),
     ])
   },
 ]

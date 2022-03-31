@@ -11336,7 +11336,7 @@ textarea.form-control-lg {
 .navbar {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 .card {
@@ -11579,11 +11579,12 @@ h5, .h5 {
 .parent {
   position: absolute;
   width: 12rem;
-  z-index: 3;
+  z-index: 0;
 }
 
-.parent:hover > .children {
+.parent:hover + .children {
   transition: transform 0.5s ease-in-out;
+  rotate: -10deg;
 }
 
 .children {
@@ -11594,15 +11595,16 @@ h5, .h5 {
 .image2 {
   position: absolute;
   width: 12rem;
-  z-index: 2;
-  transform: rotate(-5deg);
+  z-index: 0;
+  transform: rotate(-20deg);
 }
 
-.image3 {
-  width: 13rem;
-  position: absolute;
-  transform: rotate(-10deg);
-  z-index: 1;
+.image1 {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image1:hover {
+  transform: rotate(-30deg);
 }
 
 .image2 {
@@ -11611,14 +11613,6 @@ h5, .h5 {
 
 .image2:hover {
   transform: rotate(30deg);
-}
-
-.image3 {
-  transition: transform 0.3s ease-in-out;
-}
-
-.image3:hover {
-  transform: rotate(20deg);
 }
 
 .test {

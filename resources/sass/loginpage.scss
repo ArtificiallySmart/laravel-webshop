@@ -1,5 +1,4 @@
 
-
 .form-check-label{
     width: 60%;
     font-size: small;
@@ -8,54 +7,43 @@
 .parent{
   position: absolute;
   width: 12rem;
-  z-index: 3;
+  z-index: 0;
+  
  
 
  }
  
-.parent:hover > .children {
+.parent:hover + .children {
     
     transition: transform .5s ease-in-out;
-    
+    rotate: -10deg;
    
 
  }
-//  .image1.{
-//      position: absolute;
-//      width: 12rem;
-//     transform: rotate(0deg);
-//      z-index: 3;
-//  }
-  
+
 .children{
    position: absolute;
    width: 15rem;
  }
    
 
- .image2{
-     position:absolute;
-      width: 12rem;
-     z-index: 2;
-      transform: rotate(-5deg);
+ .image2{ 
+    position:absolute;
+  width: 12rem;
+    z-index: 0;
+    transform: rotate(-20deg);
     
  }
 
- .image3{
-     width:13rem;
-     position: absolute;
-    transform: rotate(-10deg);
-    z-index: 1;
-     
- }
 
-//  .image1{
-//   transition: transform .3s ease-in-out;
+
+ .image1{
+  transition: transform .3s ease-in-out;
   
-// }
-// .image1:hover {
-//   transform: rotate(-30deg);
-// }
+}
+.image1:hover {
+  transform: rotate(-30deg);
+}
 
 
 .image2{
@@ -67,19 +55,13 @@
 }
 
 
-.image3{
-  transition:  transform .3s ease-in-out;
-}
 
-.image3:hover{
-  transform: rotate(20deg);
-}
+
 
 
 .test{
     display: flex;
 
 }
-
 
 

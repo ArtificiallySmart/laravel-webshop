@@ -43,6 +43,13 @@
 
         <p></p>
         <div class="text-right">
+          <p>
+            <span>Sizes</span>
+            <button type="button" class="btn btn-light">S</button>
+            <button type="button" class="btn btn-light">M</button>
+            <button type="button" class="btn btn-light">L</button>
+            <button type="button" class="btn btn-light">XL</button>
+          </p>
           <button
             type="button"
             class="btn btn-primary"
