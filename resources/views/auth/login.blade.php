@@ -33,11 +33,11 @@
 
 
                                     <div class="parent">
-                                        <img class="parent" src="./images/skeletonTshirtforLogin.png">
+                                        <!-- <img class="parent" src="./images/skeletonTshirtforLogin.png"> -->
 
                                         <div class="children">
                                             <img class="image2" src="./images/martialartsLogin.png">
-                                            <img class="image3" src="./images/warriorflowerforLogin.png">
+                                            <!-- <img class="image3" src="./images/warriorflowerforLogin.png"> -->
 
                                         </div>
                                     </div>
@@ -94,10 +94,10 @@
                         </div>
 
 
-                        <div class="row mb-3">
-                            <div class="offset-md-3">
+                        <div class="row mb-4">
+                            <div class="offset-md-4">
                                 <button type="submit" class="btn btn-primary sumbit">
-                                    {{ __('Login / Join') }}
+                                    {{ __('Login') }}
                                 </button>
 
 
