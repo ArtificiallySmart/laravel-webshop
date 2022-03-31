@@ -20,7 +20,7 @@ class UserFactory extends Factory
             'email' => $this->faker->unique()->safeEmail(),
             'password' => bcrypt('Gorilla1!'), // password
             // 'role' => 1,
-            'created_at' => now(),
+            'created_at' => \Carbon\Carbon::now()->subDays(rand(1, 30)),
             'created_by' => 1
         ];
     }

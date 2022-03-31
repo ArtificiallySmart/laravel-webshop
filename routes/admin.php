@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +22,14 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', [AdminController::class, 'index'])->name('dashboard');
+
+Route::get('/orders', [OrderController::class, 'index'])->name('admin-orders');
+Route::get('/orders/{order}', [OrderController::class, 'order']);
+Route::put('/orders/{order}', [OrderController::class, 'changeOrderStatus'])->name('change-status');
+
+Route::get('/products', [ProductController::class, 'index'])->name('admin-products');
+
+Route::get('/users', [AdminUserController::class, 'index'])->name('admin-users');
+Route::get('/users/{user}', [AdminUserController::class, 'user']);
+Route::put('/users/{user}', [AdminUserController::class, 'updateUser']);
+Route::delete('/users/{user}', [AdminUserController::class, 'deleteUser']);

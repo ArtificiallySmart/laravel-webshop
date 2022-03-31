@@ -22,13 +22,13 @@ class UsersSeeder extends Seeder
         DB::table('users')->insert([
             'first_name'    => 'Bilbo',
             'last_name'     => 'Baggins',
-            'email'         => 'BilBag@shire.me',
-            'password'      => bcrypt('Onering'),
+            'email'         => 'admin',
+            'password'      => bcrypt('admin'),
             'is_admin'          => 1,
             'created_at'    => now(),
         ]);
 
-        User::factory(10)
+        User::factory(50)
             ->create()
             ->each(function ($user) {
                 PhoneNumber::factory()
