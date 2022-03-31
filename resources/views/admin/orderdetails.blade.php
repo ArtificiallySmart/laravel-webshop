@@ -52,7 +52,7 @@
     <div>
 
         <h3> Customer information </h3>
-        <div>{{ $order->user->first_name }} {{ $order->user->last_name }}</div>
+        <div><a href="/admin/users/{{$order->user->id}}">{{ $order->user->first_name }} {{ $order->user->last_name }}</a></div>
         <div> {{ $order->user->email }} </div>
         <div> {{ $order->user->address->street }} {{ $order->user->address->house_number }}</div>
         <div> {{ $order->user->address->zipcode }} {{ $order->user->address->city }}</div>

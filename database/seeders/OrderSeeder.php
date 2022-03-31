@@ -31,7 +31,7 @@ class OrderSeeder extends Seeder
             }
 
             $order = new Order([
-                'user_id' => rand(2, 11),
+                'user_id' => rand(2, 50),
                 'total_price' => $totalPrice,
                 'status' => $orderStatus[rand(0, 2)],
                 'created_at' => \Carbon\Carbon::now()->subDays(rand(1, 30))
@@ -48,14 +48,5 @@ class OrderSeeder extends Seeder
                 $order->orderProducts()->save($orderProduct);
             }
         }
-        // Order::factory(10)->create();
-
-        // $products = Product::all();
-
-        // Order::all()->each(function ($order) use ($products) {
-        //     $order->products()->attach(
-        //         $products->random(rand(1, 5))->pluck('id')->toArray()
-        //     );
-        // });
     }
 }

@@ -43,13 +43,13 @@
         <tbody>
             <tr>
                 <th scope="row">This week</th>
-                <td> €{{ $thisWeek }}</td>
-                <td>Otto</td>
+                <td> €{{ $ordersThisWeek }}</td>
+                <td>{{ $customersThisWeek }}</td>
             </tr>
             <tr>
                 <th scope="row">Previous week</th>
-                <td>€{{ $previousWeek }}</td>
-                <td>Thornton</td>
+                <td>€{{ $ordersPreviousWeek }}</td>
+                <td>{{ $customersPreviousWeek }}</td>
             </tr>
 
         </tbody>
