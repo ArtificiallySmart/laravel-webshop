@@ -11,7 +11,7 @@ class OrderController extends Controller
     public function index()
     {
         $newOrders = Order::where('status', 'pending')->with('user')->get();
-        $allOrders = Order::with('user')->paginate(10);
+        $allOrders = Order::with('user')->orderBy('status', 'asc')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin.orders', ['newOrders' => $newOrders, 'allOrders' => $allOrders]);
     }
     public function order(Order $order)

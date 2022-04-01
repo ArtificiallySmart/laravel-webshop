@@ -58,7 +58,7 @@
                     <td>{{ $allOrder->total_price }}</td>
                     <td>{{ $allOrder->user->first_name}} {{ $allOrder->user->last_name }} </td>
                     <td>{{ $allOrder->status }}</td>
-                    <td><a href="#">Details</a></td>
+                    <td><a href="/admin/orders/{{$allOrder->id}}">Details</a></td>
                 </tr>
                 @endforeach
             </tbody>
